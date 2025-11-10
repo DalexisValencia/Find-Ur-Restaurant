@@ -9,7 +9,7 @@ import 'package:restaurants/tabs/Search/components/Suggested/Suggested.dart';
 import 'package:restaurants/widgets/AnimationContainerWrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
+// import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 
 class ScaffoldSearch extends StatefulWidget {
   final String? from;
@@ -93,7 +93,7 @@ class _ScaffoldSearchState extends State<ScaffoldSearch> {
                           width: totalWidth,
                           child: CustomContainerAnimation(
                             animationChildren: animatedChildren,
-                            children: KeyboardVisibilityBuilder(
+                            /*children: KeyboardVisibilityBuilder(
                               builder: (context, isKeyboardVisible) {
                                 return !isKeyboardVisible &&
                                         suggestedSearches.results!.length == 0
@@ -102,7 +102,7 @@ class _ScaffoldSearchState extends State<ScaffoldSearch> {
                                       )
                                     : Results();
                               },
-                            ),
+                            ),*/
                           ),
                         ),
                       ),
