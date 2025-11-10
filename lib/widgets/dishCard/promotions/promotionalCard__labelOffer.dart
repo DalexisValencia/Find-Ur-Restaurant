@@ -28,7 +28,7 @@ class PromotionCardOffer extends StatelessWidget {
             ),
             child: Text(
               dish!.promotionLabel!.label!,
-              style: Theme.of(context).textTheme.button!.copyWith(
+              style: Theme.of(context).textTheme.labelLarge!.copyWith(
                     color: Theme.of(context).primaryColorLight,
                     fontSize: 12,
                   ),

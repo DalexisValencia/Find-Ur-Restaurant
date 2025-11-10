@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage>
   void changeSystemBarColor() {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       systemNavigationBarColor: Colors.white, // navigation bar color
-      statusBarColor: Theme.of(context).buttonColor, // status bar color
+      statusBarColor: fourthColor, // status bar color
     ));
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
   }

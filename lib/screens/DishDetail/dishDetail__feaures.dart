@@ -25,7 +25,7 @@ class DetailFeatures extends StatelessWidget {
             height: 65,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(40),
-              color: Theme.of(context).buttonColor,
+              color: fourthColor,
             ),
             child: Icon(
               Icons.restaurant_menu,
@@ -45,7 +45,7 @@ class DetailFeatures extends StatelessWidget {
               child: Text(
                 dish!.name!,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline5!.copyWith(
+                style: Theme.of(context).textTheme.titleLarge!.copyWith(
                       color: Theme.of(context).primaryColorDark,
                       fontWeight: FontWeight.w500,
                     ),
@@ -56,7 +56,7 @@ class DetailFeatures extends StatelessWidget {
             child: Text(
               "\$${formatterPrice(dish!.price)}",
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline6!.copyWith(
+              style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: Theme.of(context).primaryColorDark,
                     fontWeight: FontWeight.w500,
                   ),
@@ -74,7 +74,7 @@ class DetailFeatures extends StatelessWidget {
             child: Text(
               dish!.details!,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.button!.copyWith(
+              style: Theme.of(context).textTheme.labelLarge!.copyWith(
                     color: Theme.of(context).primaryColorDark,
                     fontWeight: FontWeight.w400,
                   ),
@@ -96,7 +96,7 @@ class DetailFeatures extends StatelessWidget {
                       Icon(
                         Icons.star,
                         size: 22,
-                        color: Theme.of(context).buttonColor,
+                        color: fourthColor,
                       ),
                     );
                   }
@@ -105,7 +105,7 @@ class DetailFeatures extends StatelessWidget {
                       Icon(
                         Icons.star,
                         size: 22,
-                        color: Theme.of(context).accentColor,
+                        color: fifthColor,
                       ),
                     );
                   }
@@ -116,7 +116,7 @@ class DetailFeatures extends StatelessWidget {
                     margin: EdgeInsets.only(left: 10),
                     child: Text(
                       '120.000 votes',
-                      style: Theme.of(context).textTheme.caption!.copyWith(
+                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
                             color: Theme.of(context).primaryColorDark,
                           ),
                     ),

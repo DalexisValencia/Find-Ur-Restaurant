@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:restaurants/interfaces/Restaurants.dart';
 import 'package:restaurants/widgets/Card__CustomChip.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class DetailedCardRestaurantOverlayDetail extends StatelessWidget {
   final Restaurants? resturant;
@@ -38,7 +39,7 @@ class DetailedCardRestaurantOverlayDetail extends StatelessWidget {
                           child: Text(
                             resturant!.name!,
                             style:
-                                Theme.of(context).textTheme.subtitle1!.copyWith(
+                                Theme.of(context).textTheme.titleMedium!.copyWith(
                                       color: Theme.of(context).primaryColorDark,
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
@@ -50,7 +51,7 @@ class DetailedCardRestaurantOverlayDetail extends StatelessWidget {
                           child: Text(
                             resturant!.description!.substring(0, 20) + "...",
                             style:
-                                Theme.of(context).textTheme.caption!.copyWith(
+                                Theme.of(context).textTheme.bodySmall!.copyWith(
                                       fontSize: 10,
                                       color: Theme.of(context).primaryColor,
                                       fontWeight: FontWeight.w400,
@@ -65,7 +66,7 @@ class DetailedCardRestaurantOverlayDetail extends StatelessWidget {
                   width: 35,
                   height: 35,
                   decoration: BoxDecoration(
-                    color: Theme.of(context).buttonColor,
+                    color: fourthColor,
                     borderRadius: BorderRadius.circular(50),
                   ),
                   child: Icon(

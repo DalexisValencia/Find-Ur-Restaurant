@@ -84,8 +84,8 @@ class _DishCardState extends State<DishCard> {
       decoration: BoxDecoration(
         border: Border.all(
           color: widget.borderCustomColor
-              ? Theme.of(context).buttonColor
-              : Theme.of(context).accentColor.withOpacity(0.2),
+              ? fourthColor
+              : fifthColor.withOpacity(0.2),
           width: widget.borderCustomColor ? 1.2 : 1,
         ),
         borderRadius: BorderRadius.circular(8),
@@ -100,8 +100,8 @@ class _DishCardState extends State<DishCard> {
             ? cardSelectedBgColor
             : Theme.of(context).primaryColorLight,
         padding: EdgeInsets.all(0),
-        splashColor: Theme.of(context).buttonColor,
-        highlightColor: Theme.of(context).buttonColor.withOpacity(0.1),
+        splashColor: fourthColor,
+        highlightColor: fourthColor.withOpacity(0.1),
         onPressed: () => goToDetails(),
         child: Container(
           margin: EdgeInsets.symmetric(

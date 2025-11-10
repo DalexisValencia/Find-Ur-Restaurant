@@ -76,7 +76,7 @@ class _WhatAreYouLookinForFormState extends State<WhatAreYouLookinForForm> {
       openColor: Colors.transparent,
       closedBuilder: (BuildContext context, closedContainer) {
         return MaterialButton(
-          splashColor: Theme.of(context).buttonColor,
+          splashColor: fourthColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),

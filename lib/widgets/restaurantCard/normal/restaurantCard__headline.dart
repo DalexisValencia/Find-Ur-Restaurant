@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:restaurants/interfaces/Restaurants.dart';
 import 'package:restaurants/widgets/Button_roundWithIcon.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class RestaurantCardHeadline extends StatelessWidget {
   final bool? selected;
@@ -27,7 +28,7 @@ class RestaurantCardHeadline extends StatelessWidget {
                 ? Theme.of(context).primaryColorLight
                 : Theme.of(context).primaryColorLight.withOpacity(0.9),
             bgColor: selected! && favorite!
-                ? Theme.of(context).buttonColor
+                ? fourthColor
                 : Theme.of(context).primaryColor.withOpacity(0.5),
             trigger: () {},
           ),
@@ -41,7 +42,7 @@ class RestaurantCardHeadline extends StatelessWidget {
                 fit: BoxFit.scaleDown,
                 child: Text(
                   restaurant!.name!,
-                  style: Theme.of(context).textTheme.headline6!.copyWith(
+                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: Theme.of(context).primaryColorLight,
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -60,7 +61,7 @@ class RestaurantCardHeadline extends StatelessWidget {
               ),
               Text(
                 restaurant!.description!,
-                style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                   color: Theme.of(context).primaryColorLight,
                   fontSize: 13,
                   fontWeight: FontWeight.w400,

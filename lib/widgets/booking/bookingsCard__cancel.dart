@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class BookingsCardCancel extends StatelessWidget {
   final String? booking;
@@ -16,9 +17,9 @@ class BookingsCardCancel extends StatelessWidget {
           child: booking != 'no-price'
               ? Text(
                   "\$12.000",
-                  style: Theme.of(context).textTheme.caption!.copyWith(
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         fontWeight: FontWeight.w700,
-                        color: Theme.of(context).buttonColor,
+                        color: Theme.of(context).colorScheme.primary,
                       ),
                 )
               : Text(""),
@@ -27,7 +28,7 @@ class BookingsCardCancel extends StatelessWidget {
           alignment: Alignment.bottomRight,
           child: MaterialButton(
             disabledColor: Theme.of(context).primaryColorDark.withAlpha(100),
-            color: Theme.of(context).buttonColor,
+            color: fourthColor,
             height: 25,
             padding: EdgeInsets.all(0),
             elevation: 0,
@@ -38,9 +39,9 @@ class BookingsCardCancel extends StatelessWidget {
             onHighlightChanged: (val) {},
             child: Text(
               'Cancel',
-              style: Theme.of(context).textTheme.caption!.copyWith(
+              style: Theme.of(context).textTheme.bodySmall!.copyWith(
                     color: booking != 'today'
-                        ? Theme.of(context).primaryColorLight
+                        ? Theme.of(context).colorScheme.primary
                         : Theme.of(context).primaryColorDark,
                   ),
             ),

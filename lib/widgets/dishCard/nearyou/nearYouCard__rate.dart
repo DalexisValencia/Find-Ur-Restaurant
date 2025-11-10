@@ -33,7 +33,7 @@ class NearYouCardRate extends StatelessWidget {
                 ),
                 Text(
                   dish!.rating.toString(),
-                  style: Theme.of(context).textTheme.caption!.copyWith(
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         fontWeight: FontWeight.w600,
                         fontSize: 11,
                         color: Theme.of(context).primaryColorLight,

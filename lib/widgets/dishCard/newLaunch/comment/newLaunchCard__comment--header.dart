@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:restaurants/interfaces/Dishes.dart';
 import 'package:restaurants/widgets/Card__CustomChip.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class NewLauchCardCommentHeader extends StatelessWidget {
   final Dishes? dish;
@@ -39,7 +40,7 @@ class NewLauchCardCommentHeader extends StatelessWidget {
                           child: Text(
                             dish!.name!,
                             style:
-                                Theme.of(context).textTheme.subtitle1!.copyWith(
+                                Theme.of(context).textTheme.titleMedium!.copyWith(
                                       color: Theme.of(context).primaryColorDark,
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
@@ -51,7 +52,7 @@ class NewLauchCardCommentHeader extends StatelessWidget {
                           child: Text(
                             dish!.details!.substring(0, 28) + '...',
                             style:
-                                Theme.of(context).textTheme.caption!.copyWith(
+                                Theme.of(context).textTheme.bodySmall!.copyWith(
                                       color: Theme.of(context).primaryColor,
                                       fontWeight: FontWeight.w400,
                                     ),
@@ -65,7 +66,7 @@ class NewLauchCardCommentHeader extends StatelessWidget {
                   width: 35,
                   height: 35,
                   decoration: BoxDecoration(
-                    color: Theme.of(context).buttonColor,
+                    color: fourthColor,
                     borderRadius: BorderRadius.circular(50),
                   ),
                   child: Icon(
@@ -96,7 +97,7 @@ class NewLauchCardCommentHeader extends StatelessWidget {
                 textColor: Theme.of(context).primaryColorDark,
                 textSize: 11,
                 icon: Icons.star,
-                iconColor: Theme.of(context).buttonColor,
+                iconColor: fourthColor,
                 iconSize: 13,
               ),
               CustomChip(

@@ -47,7 +47,7 @@ class _SeeMoreDishesByRestaurantState extends State<SeeMoreDishesByRestaurant> {
           child: Text(
             name.toString().toUpperCase(),
             textAlign: TextAlign.left,
-            style: Theme.of(context).textTheme.headline5!.copyWith(
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
                 color: Theme.of(context).primaryColorDark,
                 fontWeight: FontWeight.w600),
           ),
@@ -59,7 +59,7 @@ class _SeeMoreDishesByRestaurantState extends State<SeeMoreDishesByRestaurant> {
           child: RichText(
             text: TextSpan(
                 text: "Total Registers: ",
-                style: Theme.of(context).textTheme.button!.copyWith(
+                style: Theme.of(context).textTheme.labelLarge!.copyWith(
                     color: Theme.of(context).primaryColorDark,
                     fontSize: 12,
                     fontWeight: FontWeight.w300),

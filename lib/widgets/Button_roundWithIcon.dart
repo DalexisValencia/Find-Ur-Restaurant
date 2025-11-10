@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class CircleIconButton extends StatefulWidget {
   final IconData? icon;
@@ -21,7 +22,7 @@ class _CircleIconButtonState extends State<CircleIconButton> {
     return MaterialButton(
       minWidth: 40,
       elevation: 0,
-      splashColor: Theme.of(context).buttonColor,
+      splashColor: fourthColor,
       onPressed: () {},
       onHighlightChanged: (value) {
         if (value == false) {

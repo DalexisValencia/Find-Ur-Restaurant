@@ -1,10 +1,10 @@
 import 'dart:async';
+import 'package:flutter/material.dart';
 import 'package:restaurants/blocs/bloc/cart/bloc/cart_bloc.dart';
 import 'package:restaurants/blocs/bloc/favorites/bloc/favorites_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 import 'package:restaurants/tabs/main.tabs.dart';
 import 'package:restaurants/screens/splash/splashScreen.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
@@ -21,8 +21,11 @@ class MyApp extends StatelessWidget {
         primaryColor: primaryColor,
         primaryColorLight: secondaryColor,
         primaryColorDark: tertiaryColor,
-        buttonColor: fourthColor,
-        accentColor: fifthColor,
+        buttonTheme: ButtonThemeData(
+          buttonColor: fourthColor,
+          textTheme: ButtonTextTheme.primary,
+        ),
+        // accentColor: fifthColor,
         cardColor: sixthColor,
         hoverColor: seventhColor,
         focusColor: eightColor,

@@ -43,7 +43,7 @@ class PromotionCardFeatures extends StatelessWidget {
             SizedBox(height: 5),
             Text(
               dish!.name!,
-              style: Theme.of(context).textTheme.button!.copyWith(
+              style: Theme.of(context).textTheme.labelLarge!.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
             ),

@@ -87,7 +87,7 @@ class _RestaurantTopSummaryState extends State<RestaurantTopSummary> {
       child: MaterialButton(
         elevation: 0,
         color: Colors.transparent,
-        splashColor: Theme.of(context).buttonColor,
+        splashColor: fourthColor,
         child: Stack(
           children: <Widget>[
             Positioned(

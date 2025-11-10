@@ -18,7 +18,7 @@ class HighlightCardDetails extends StatelessWidget {
         children: <Widget>[
           Text(
             suggestion!.name!,
-            style: Theme.of(context).textTheme.button!.copyWith(
+            style: Theme.of(context).textTheme.labelLarge!.copyWith(
               color: Theme.of(context).primaryColorLight,
               fontWeight: FontWeight.w800,
               shadows: [
@@ -34,7 +34,7 @@ class HighlightCardDetails extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               suggestion!.details!.substring(0, 15) + '...',
-              style: Theme.of(context).textTheme.caption!.copyWith(
+              style: Theme.of(context).textTheme.bodySmall!.copyWith(
                 color: Theme.of(context).primaryColorLight,
                 shadows: [
                   Shadow(

@@ -19,7 +19,7 @@ class ResultsTitle extends StatelessWidget {
         child: RichText(
           text: TextSpan(
             text: 'Show ',
-            style: Theme.of(context).textTheme.button!.copyWith(
+            style: Theme.of(context).textTheme.labelLarge!.copyWith(
                   color: Theme.of(context).primaryColorDark,
                 ),
             children: <TextSpan>[

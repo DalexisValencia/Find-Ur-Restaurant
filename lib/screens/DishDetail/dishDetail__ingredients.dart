@@ -20,7 +20,7 @@ class _SummaryIngredientsState extends State<SummaryIngredients> {
           child: Text(
             'Ingreddients for plate',
             textAlign: TextAlign.left,
-            style: Theme.of(context).textTheme.subtitle1!.copyWith(
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
                 fontWeight: FontWeight.bold,
                 color: Theme.of(context).primaryColorDark),
           ),
@@ -62,7 +62,7 @@ class _SummaryIngredientsState extends State<SummaryIngredients> {
                 fit: BoxFit.scaleDown,
                 child: Text(
                   ingredient.amountGrams!,
-                  style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
                       fontWeight: FontWeight.w500,
                       color: Theme.of(context).primaryColorDark),
                 ),
@@ -74,7 +74,7 @@ class _SummaryIngredientsState extends State<SummaryIngredients> {
                 fit: BoxFit.scaleDown,
                 child: Text(
                   ingredient.name!,
-                  style: Theme.of(context).textTheme.caption!.copyWith(
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
                       fontSize: 9,
                       fontWeight: FontWeight.normal,
                       color: Theme.of(context).primaryColorDark),

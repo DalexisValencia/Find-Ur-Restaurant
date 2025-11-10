@@ -23,14 +23,14 @@ class ScreenHeading extends StatelessWidget {
           Text(
             title!,
             textAlign: TextAlign.left,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
                   color: Theme.of(context).primaryColorDark,
                   fontWeight: FontWeight.w600,
                 ),
           ),
           Text(
             subtitle!,
-            style: Theme.of(context).textTheme.button!.copyWith(
+            style: Theme.of(context).textTheme.labelLarge!.copyWith(
                   color: Theme.of(context).primaryColorDark,
                   fontWeight: FontWeight.w300,
                 ),

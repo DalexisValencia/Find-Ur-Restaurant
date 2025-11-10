@@ -108,7 +108,7 @@ class _CardCarBodyState extends State<CardCarBody> {
               : cardSelectedBgColor,
           border: Border.all(
             color: widget.selected!
-                ? Theme.of(context).buttonColor
+                ? fourthColor
                 : Theme.of(context).primaryColorDark.withOpacity(0.5),
             width:
                 widget.selected! ? borderWidthSelected : borderWidhNoSelected,

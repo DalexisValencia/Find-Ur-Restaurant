@@ -41,7 +41,7 @@ class CustomChip extends StatelessWidget {
           ),
           Text(
             text!,
-            style: Theme.of(context).textTheme.caption!.copyWith(
+            style: Theme.of(context).textTheme.bodySmall!.copyWith(
                   fontWeight: FontWeight.w700,
                   fontSize: textSize,
                   color: textColor,

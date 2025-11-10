@@ -17,7 +17,7 @@ class _RoundedCustomButtonState extends State<RoundedCustomButton> {
   Widget build(BuildContext context) {
     return MaterialButton(
       padding: EdgeInsets.all(0),
-      splashColor: Theme.of(context).buttonColor,
+      splashColor: fourthColor,
       height: 25,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(
@@ -27,8 +27,8 @@ class _RoundedCustomButtonState extends State<RoundedCustomButton> {
       onPressed: () => widget.callPressed!(),
       child: Text(
         widget.title!,
-        style: Theme.of(context).textTheme.bodyText1!.copyWith(
-              color: Theme.of(context).buttonColor,
+        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+              color: fourthColor,
               fontWeight: FontWeight.w700,
               decoration: TextDecoration.underline,
             ),

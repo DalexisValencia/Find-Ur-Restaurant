@@ -7,6 +7,7 @@ import 'package:restaurants/interfaces/categories.dart';
 import 'package:restaurants/screens/Disscover/disscover.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class HomeCategoriesSuggestedCard extends StatefulWidget {
   final Category? category;
@@ -74,7 +75,7 @@ class _HomeCategoriesSuggestedCardState
         );
       },
       color: Theme.of(context).primaryColorLight,
-      splashColor: Theme.of(context).buttonColor,
+      splashColor: fourthColor,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -94,7 +95,7 @@ class _HomeCategoriesSuggestedCardState
             fit: BoxFit.scaleDown,
             child: Text(
               widget.category!.name!,
-              style: Theme.of(context).textTheme.bodyText1!.copyWith(
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     color: Theme.of(context).primaryColorDark,
                   ),
             ),

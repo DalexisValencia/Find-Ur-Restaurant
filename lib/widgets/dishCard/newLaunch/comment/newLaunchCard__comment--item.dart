@@ -50,7 +50,7 @@ class NewLaunchCardCommentItems extends StatelessWidget {
                               comments![idx].name!,
                               style: Theme.of(context)
                                   .textTheme
-                                  .caption!
+                                  .bodySmall!
                                   .copyWith(
                                     color: Theme.of(context).primaryColorDark,
                                     fontWeight: FontWeight.bold,
@@ -63,7 +63,7 @@ class NewLaunchCardCommentItems extends StatelessWidget {
                                       '...',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .caption!
+                                      .bodySmall!
                                       .copyWith(
                                         fontSize: 11,
                                         fontWeight: FontWeight.w300,

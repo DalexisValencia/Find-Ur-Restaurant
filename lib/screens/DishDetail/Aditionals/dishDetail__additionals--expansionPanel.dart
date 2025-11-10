@@ -2,6 +2,7 @@ import 'package:restaurants/blocs/bloc/additional/additionals_bloc.dart';
 import 'package:restaurants/interfaces/aditional.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class AditionalExpansionPanel extends StatefulWidget {
   final int? index;
@@ -60,7 +61,7 @@ class _AditionalExpansionPanelState extends State<AditionalExpansionPanel> {
         backgroundColor: Theme.of(context).primaryColorLight,
         title: Text(
           widget.additional!.title!,
-          style: Theme.of(context).textTheme.button!.copyWith(
+          style: Theme.of(context).textTheme.labelLarge!.copyWith(
                 color: Theme.of(context).primaryColorDark,
               ),
         ),
@@ -168,14 +169,14 @@ class _AditionalCheckBoxTileState extends State<AditionalCheckBoxTile> {
             children: <Widget>[
               Text(
                 widget.name!,
-                style: Theme.of(context).textTheme.caption!.copyWith(
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
                       color: Theme.of(context).primaryColorDark,
                     ),
               ),
               widget.price.toString() != '0'
                   ? Text(
                       "\$" + widget.price.toString(),
-                      style: Theme.of(context).textTheme.caption!.copyWith(
+                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
                             color: Theme.of(context).primaryColorDark,
                             fontWeight: FontWeight.w700,
                           ),
@@ -187,7 +188,7 @@ class _AditionalCheckBoxTileState extends State<AditionalCheckBoxTile> {
             ],
           ),
         ),
-        activeColor: Theme.of(context).buttonColor,
+        activeColor: fourthColor,
         value: isCurrentCheckActive,
         onChanged: (val) => _activeOption(val),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class SharedCircle extends StatefulWidget {
   final String? title;
@@ -22,7 +23,7 @@ class _SharedCircleState extends State<SharedCircle> {
           child: MaterialButton(
             //this wwas a RaisedButton
             elevation: 0,
-            color: Theme.of(context).accentColor.withOpacity(0.5),
+            color: fifthColor.withOpacity(0.5),
             onPressed: () {},
             padding: EdgeInsets.all(0),
             shape: RoundedRectangleBorder(
@@ -45,7 +46,7 @@ class _SharedCircleState extends State<SharedCircle> {
             fit: BoxFit.scaleDown,
             child: Text(
               widget.title!,
-              style: Theme.of(context).textTheme.bodyText1!.copyWith(
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     color: Theme.of(context).primaryColorDark,
                     fontSize: 12,
                   ),

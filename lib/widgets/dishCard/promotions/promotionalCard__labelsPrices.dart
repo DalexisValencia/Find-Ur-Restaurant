@@ -27,15 +27,15 @@ class PromotionalCardLabelsPrices extends StatelessWidget {
                           ),
                           child: Chip(
                             backgroundColor: item.key == 0
-                                ? Theme.of(context).buttonColor
-                                : Theme.of(context).accentColor,
+                                ? fourthColor
+                                : fifthColor,
                             label: FittedBox(
                               fit: BoxFit.scaleDown,
                               child: Text(
                                 '${item.value.amount}-\$${formatterPrice(item.value.price)}',
                                 style: Theme.of(context)
                                     .textTheme
-                                    .bodyText1!
+                                    .bodyMedium!
                                     .copyWith(
                                       fontWeight: FontWeight.bold,
                                       color:

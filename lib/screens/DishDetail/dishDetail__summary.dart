@@ -26,7 +26,7 @@ class _DishSummaryState extends State<DishSummary> {
       child: Text(
         "Summary",
         textAlign: TextAlign.left,
-        style: Theme.of(context).textTheme.subtitle1!.copyWith(
+        style: Theme.of(context).textTheme.titleMedium!.copyWith(
             fontWeight: FontWeight.bold,
             color: Theme.of(context).primaryColorDark),
       ),
@@ -73,15 +73,15 @@ class _DishSummaryState extends State<DishSummary> {
               Icon(
                 icon,
                 size: 12,
-                color: Theme.of(context).accentColor,
+                color: fifthColor,
               ),
               SizedBox(
                 width: 2,
               ),
               Text(
                 name,
-                style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                    color: Theme.of(context).accentColor,
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    color: fifthColor,
                     fontSize: 12,
                     fontWeight: FontWeight.w400),
               ),
@@ -89,7 +89,7 @@ class _DishSummaryState extends State<DishSummary> {
           ),
           Text(
             value,
-            style: Theme.of(context).textTheme.bodyText1!.copyWith(
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                 color: Theme.of(context).primaryColorDark,
                 fontWeight: FontWeight.w800),
           ),

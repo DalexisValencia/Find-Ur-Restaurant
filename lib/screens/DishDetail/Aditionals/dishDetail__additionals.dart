@@ -33,7 +33,7 @@ class AditionalsState extends State<Aditionals> {
       width: MediaQuery.of(context).size.width,
       child: Text(
         "Aditionals",
-        style: Theme.of(context).textTheme.subtitle1!.copyWith(
+        style: Theme.of(context).textTheme.titleMedium!.copyWith(
               fontWeight: FontWeight.bold,
               color: Theme.of(context).primaryColorDark,
             ),

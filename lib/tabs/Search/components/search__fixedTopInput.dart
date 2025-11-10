@@ -3,6 +3,7 @@ import 'package:restaurants/interfaces/search.dart';
 import 'package:restaurants/widgets/Button_roundWithIcon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class FixedTopHeader extends StatefulWidget {
   final String? from;
@@ -77,7 +78,7 @@ class FixedTopHeaderState extends State<FixedTopHeader> {
               padding: EdgeInsets.all(0),
               elevation: 0,
               color: Colors.transparent,
-              splashColor: Theme.of(context).buttonColor,
+              splashColor: fourthColor,
               child: Icon(
                 modelSearch.results!.length >= 1 && searcController.text != ''
                     ? Icons.close
@@ -127,7 +128,7 @@ class FixedTopHeaderState extends State<FixedTopHeader> {
                 contentPadding: EdgeInsets.all(0),
                 // prefixIcon: Icon(Icons.search),
                 // prefixStyle: TextStyle(
-                //     color: Theme.of(context).buttonColor,
+                //     color: fourthColor
                 //     fontWeight: FontWeight.w700),
                 hintText: 'Search ...',
                 hintStyle: TextStyle(
@@ -171,7 +172,7 @@ class FixedTopHeaderState extends State<FixedTopHeader> {
         CircleIconButton(
           icon: Icons.arrow_back,
           color: Theme.of(context).primaryColorDark,
-          bgColor: Theme.of(context).accentColor.withOpacity(.1),
+          bgColor: fifthColor.withOpacity(.1),
           trigger: () {
             if (widget.from == 'nav') {
               Navigator.pop(context);
@@ -187,7 +188,7 @@ class FixedTopHeaderState extends State<FixedTopHeader> {
         CircleIconButton(
           icon: Icons.more_vert,
           color: Theme.of(context).primaryColorDark.withOpacity(0.7),
-          bgColor: Theme.of(context).accentColor.withOpacity(.1),
+          bgColor: fifthColor.withOpacity(.1),
           trigger: () {},
         ),
       ],

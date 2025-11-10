@@ -19,7 +19,7 @@ class CarEmpty extends StatelessWidget {
           SizedBox(height: 4),
           Text(
             'Your cart is empty',
-            style: Theme.of(context).textTheme.caption!.copyWith(
+            style: Theme.of(context).textTheme.bodySmall!.copyWith(
                   color: Theme.of(context).primaryColorDark,
                   fontWeight: FontWeight.w500,
                 ),

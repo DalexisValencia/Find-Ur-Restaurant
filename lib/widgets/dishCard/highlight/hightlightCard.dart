@@ -6,6 +6,7 @@ import 'package:restaurants/screens/DishDetail/dishDetail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:restaurants/widgets/dishCard/highlight/hightlightCard__details.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 /*
   Utilizado en el slide horizontal de productos destacados.
@@ -91,7 +92,7 @@ class _SuggestionDishCardState extends State<SuggestionDishCard> {
             elevation: 0,
             onPressed: () => goToDetails(),
             fillColor: Color(0x000000),
-            splashColor: Theme.of(context).buttonColor,
+            splashColor: fourthColor,
             child: HighlightCardDetails(
               suggestion: widget.suggestion!,
             ),

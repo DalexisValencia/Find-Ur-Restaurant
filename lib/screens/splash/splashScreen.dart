@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -12,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
       child: Column(
         children: <Widget>[
           CircularProgressIndicator(
-            backgroundColor: Theme.of(context).buttonColor,
+            backgroundColor:fourthColor,
             strokeWidth: 4,
             color: Colors.red,
             valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF686778)),
@@ -25,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
               "Loading Data...",
               style: Theme.of(context)
                   .textTheme
-                  .button!
+                  .labelLarge!
                   .copyWith(color: Theme.of(context).primaryColorLight),
             ),
           ),
@@ -41,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Center(
           child: Text(
             "Restaurant For You".toUpperCase(),
-            style: Theme.of(context).textTheme.subtitle1!.copyWith(
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
                 fontWeight: FontWeight.bold,
                 color: Theme.of(context).primaryColorLight),
           ),
@@ -51,7 +52,7 @@ class _SplashScreenState extends State<SplashScreen> {
             "Discover and Share",
             style: Theme.of(context)
                 .textTheme
-                .caption!
+                .bodySmall!
                 .copyWith(color: Theme.of(context).primaryColorLight),
           ),
         )

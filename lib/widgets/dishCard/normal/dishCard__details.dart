@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:restaurants/interfaces/Dishes.dart';
 import 'package:restaurants/widgets/Card__CustomChip.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class DishCardDetails extends StatelessWidget {
   final Dishes? dish;
@@ -24,7 +25,7 @@ class DishCardDetails extends StatelessWidget {
             Container(
               child: Text(
                 dish!.name!,
-                style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                style: Theme.of(context).textTheme.titleMedium!.copyWith(
                       fontWeight: FontWeight.bold,
                       color: Theme.of(context).primaryColorDark,
                     ),
@@ -38,7 +39,7 @@ class DishCardDetails extends StatelessWidget {
                 ),
                 child: Text(
                   dish!.details!.substring(0, 80) + '...',
-                  style: Theme.of(context).textTheme.caption!.copyWith(
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         color: Theme.of(context).primaryColor,
                       ),
                 ),
@@ -57,7 +58,7 @@ class DishCardDetails extends StatelessWidget {
                       textColor: Theme.of(context).primaryColorDark,
                       textSize: 12,
                       icon: Icons.star,
-                      iconColor: Theme.of(context).buttonColor,
+                      iconColor: fourthColor,
                       iconSize: 16,
                     ),
                     Spacer(),
@@ -65,13 +66,13 @@ class DishCardDetails extends StatelessWidget {
                       color: Colors.transparent,
                       child: InkWell(
                         onTap: () => addToCar!(dish!),
-                        splashColor: Theme.of(context).buttonColor,
+                        splashColor: fourthColor,
                         child: CustomChip(
                           text: '\$${dish!.price!.toInt()}', //\$
                           textColor: Theme.of(context).primaryColorDark,
                           textSize: 12,
                           icon: Icons.add_shopping_cart,
-                          iconColor: Theme.of(context).buttonColor,
+                          iconColor: fourthColor,
                           iconSize: 16,
                         ),
                       ),

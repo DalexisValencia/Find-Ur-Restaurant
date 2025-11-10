@@ -71,7 +71,7 @@ class _DishDetailHeaderState extends State<DishDetailHeader> {
               iconColor: favoriteDishes
                       .map((item) => item.name)
                       .contains(widget.dish!.name!)
-                  ? Theme.of(context).buttonColor
+                  ? fourthColor
                   : widget.minSizeReached!
                       ? Theme.of(context).primaryColorDark
                       : Theme.of(context).primaryColorLight,

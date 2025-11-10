@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class RestaurantdetailMap extends StatelessWidget {
   @override
@@ -7,7 +8,7 @@ class RestaurantdetailMap extends StatelessWidget {
       margin: EdgeInsets.only(
         top: MediaQuery.of(context).size.width * 0.05,
       ),
-      color: Theme.of(context).accentColor,
+      color: fifthColor,
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height * 0.30,
     );

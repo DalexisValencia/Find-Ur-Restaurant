@@ -38,7 +38,7 @@ class _CardCarModifiersState extends State<CardCarModifiers> {
               ),
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                color: Theme.of(context).buttonColor,
+                color: fourthColor,
                 borderRadius: showModifiers
                     ? BorderRadius.circular(0)
                     : BorderRadius.only(
@@ -55,7 +55,7 @@ class _CardCarModifiersState extends State<CardCarModifiers> {
                 children: [
                   Text(
                     "Modificadores",
-                    style: Theme.of(context).textTheme.caption!.copyWith(
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           color: Theme.of(context).primaryColorLight,
                           fontWeight: FontWeight.w400,
                         ),
@@ -138,13 +138,13 @@ class ModifiersOption extends StatelessWidget {
         children: [
           Text(
             option!.name!,
-            style: Theme.of(context).textTheme.caption!.copyWith(
+            style: Theme.of(context).textTheme.bodySmall!.copyWith(
                   color: Theme.of(context).primaryColorDark,
                 ),
           ),
           Text(
             option!.price != 0 ? "\$${formatterPrice(option!.price)}" : 'Yes',
-            style: Theme.of(context).textTheme.caption!.copyWith(
+            style: Theme.of(context).textTheme.bodySmall!.copyWith(
                   color: Theme.of(context).primaryColorDark,
                 ),
           ),

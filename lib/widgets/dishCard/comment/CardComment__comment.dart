@@ -51,7 +51,7 @@ class CardCommentItem extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         dish!.comments![0].name!,
-                        style: Theme.of(context).textTheme.caption!.copyWith(
+                        style: Theme.of(context).textTheme.bodySmall!.copyWith(
                               fontWeight: FontWeight.bold,
                             ),
                       ),
@@ -62,7 +62,7 @@ class CardCommentItem extends StatelessWidget {
                         dish!.comments![0].comment!.substring(0, 60) + '...',
                         style: Theme.of(context)
                             .textTheme
-                            .caption!
+                            .bodySmall!
                             .copyWith(fontSize: 9),
                       )
                     ],

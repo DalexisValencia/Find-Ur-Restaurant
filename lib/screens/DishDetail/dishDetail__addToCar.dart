@@ -80,11 +80,11 @@ class _AddtoCarState extends State<AddtoCar> {
               decoration: BoxDecoration(
                 border: Border(
                   top: BorderSide(
-                    color: Theme.of(context).accentColor,
+                    color: fifthColor,
                     width: 1,
                   ),
                 ),
-                color: Theme.of(context).buttonColor,
+                color: fourthColor,
               ),
               padding: EdgeInsets.symmetric(
                 horizontal: MediaQuery.of(context).size.width * defaultPadding,
@@ -103,7 +103,7 @@ class _AddtoCarState extends State<AddtoCar> {
                               "\$${finalPrice(stateAmount.props[0], state.props[1])}",
                               style: Theme.of(context)
                                   .textTheme
-                                  .bodyText1!
+                                  .bodyMedium!
                                   .copyWith(
                                     fontSize: 22,
                                     color: Theme.of(context).primaryColorLight,
@@ -122,8 +122,8 @@ class _AddtoCarState extends State<AddtoCar> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            primary: Theme.of(context).primaryColorLight,
-                            onPrimary: Colors.blue,
+                            backgroundColor: Theme.of(context).primaryColorLight,
+                            foregroundColor: Colors.blue,
                             elevation: 0,
                           ),
                           onPressed: _addingCar
@@ -138,7 +138,7 @@ class _AddtoCarState extends State<AddtoCar> {
                               : Icon(
                                   Icons.add_shopping_cart,
                                   size: 18,
-                                  color: Theme.of(context).buttonColor,
+                                  color: fourthColor,
                                 ),
                           label: _addingCar
                               ? Container(
@@ -154,9 +154,9 @@ class _AddtoCarState extends State<AddtoCar> {
                                   "Añadir",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .bodyText1!
+                                      .bodyMedium!
                                       .copyWith(
-                                        color: Theme.of(context).buttonColor,
+                                        color: fourthColor,
                                       ),
                                 ),
                         ),

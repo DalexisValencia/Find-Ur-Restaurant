@@ -22,7 +22,7 @@ class SeeAllRecents extends StatelessWidget {
           onPressed: () {},
           child: Text(
             title!,
-            style: Theme.of(context).textTheme.caption!.copyWith(
+            style: Theme.of(context).textTheme.bodySmall!.copyWith(
                 decoration: TextDecoration.underline,
                 color: Theme.of(context).primaryColorDark),
           ),

@@ -14,7 +14,7 @@ class DetailedCardRestaurantSeparator extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(
-            color: Theme.of(context).accentColor,
+            color: fifthColor,
             width: 1,
           ),
         ),

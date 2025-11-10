@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class LoadingSearch extends StatelessWidget {
   @override
@@ -10,7 +11,7 @@ class LoadingSearch extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       child: Center(
         child: CircularProgressIndicator(
-          backgroundColor: Theme.of(context).buttonColor,
+          backgroundColor: fourthColor,
           strokeWidth: 4,
         ),
       ),

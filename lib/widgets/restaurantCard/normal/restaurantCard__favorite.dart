@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:restaurants/interfaces/Restaurants.dart';
 import 'package:restaurants/widgets/Button_roundWithIcon.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class RestaurantCardFavorite extends StatelessWidget {
   final Function? addToFavorites;
@@ -21,15 +22,15 @@ class RestaurantCardFavorite extends StatelessWidget {
       child: CircleIconButton(
         icon: Icons.favorite,
         color: selected! && favorite!
-            ? Theme.of(context).buttonColor
+            ? fourthColor
             : favorite!
-                ? Theme.of(context).buttonColor
+                ? fourthColor
                 : Theme.of(context).primaryColorLight,
         bgColor: selected! && favorite!
             ? Theme.of(context).primaryColorLight
             : favorite!
                 ? Theme.of(context).primaryColorLight
-                : Theme.of(context).buttonColor,
+                : fourthColor,
         // trigger: selected! ? null : addToFavorites,
         trigger: () => addToFavorites!(),
       ),

@@ -19,7 +19,7 @@ class NearYouCardDescription extends StatelessWidget {
           Text(
             dish!.name!,
             textAlign: TextAlign.start,
-            style: Theme.of(context).textTheme.caption!.copyWith(
+            style: Theme.of(context).textTheme.bodySmall!.copyWith(
                   color: Theme.of(context).primaryColorDark,
                   fontWeight: FontWeight.w700,
                 ),
@@ -28,7 +28,7 @@ class NearYouCardDescription extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               dish!.details!.substring(1, 25) + '...',
-              style: Theme.of(context).textTheme.caption!.copyWith(
+              style: Theme.of(context).textTheme.bodySmall!.copyWith(
                     wordSpacing: 0.5,
                     fontSize: 10,
                     fontWeight: FontWeight.w400,

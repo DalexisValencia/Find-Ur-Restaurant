@@ -48,14 +48,14 @@ class CardCommentDetails extends StatelessWidget {
                     width: 30,
                     height: 18,
                     decoration: BoxDecoration(
-                      color: Theme.of(context).buttonColor,
+                      color: fourthColor,
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: FittedBox(
                       fit: BoxFit.scaleDown,
                       child: Text(
                         dish!.rating.toString(),
-                        style: Theme.of(context).textTheme.caption!.copyWith(
+                        style: Theme.of(context).textTheme.bodySmall!.copyWith(
                               fontSize: 10,
                               fontWeight: FontWeight.w500,
                               color: Theme.of(context).primaryColorLight,
@@ -70,7 +70,7 @@ class CardCommentDetails extends StatelessWidget {
             SizedBox(height: 6),
             Text(
               dish!.name!,
-              style: Theme.of(context).textTheme.caption!.copyWith(
+              style: Theme.of(context).textTheme.bodySmall!.copyWith(
                     fontWeight: FontWeight.w700,
                     color: Theme.of(context).primaryColorDark,
                   ),
@@ -78,7 +78,7 @@ class CardCommentDetails extends StatelessWidget {
             SizedBox(height: 5),
             Text(
               dish!.details!.substring(0, 73) + '...',
-              style: Theme.of(context).textTheme.overline!.copyWith(
+              style: Theme.of(context).textTheme.labelSmall!.copyWith(
                     letterSpacing: 0,
                     color: Theme.of(context).primaryColor,
                   ),

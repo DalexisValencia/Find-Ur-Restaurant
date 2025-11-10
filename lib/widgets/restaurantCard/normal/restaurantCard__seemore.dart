@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class RestaurantCardSeeMore extends StatelessWidget {
   final Function? goRestaurantDetails;
@@ -21,13 +22,13 @@ class RestaurantCardSeeMore extends StatelessWidget {
           onPressed: () => goRestaurantDetails!(),
           color: selected!
               ? Theme.of(context).primaryColorLight
-              : Theme.of(context).buttonColor,
+              : fourthColor,
           elevation: 0,
           child: Text(
             'See more',
-            style: Theme.of(context).textTheme.caption!.copyWith(
+            style: Theme.of(context).textTheme.bodySmall!.copyWith(
                   color: selected!
-                      ? Theme.of(context).buttonColor
+                      ? fourthColor
                       : Theme.of(context).primaryColorLight,
                   fontWeight: FontWeight.w500,
                 ),

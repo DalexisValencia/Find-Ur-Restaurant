@@ -29,7 +29,7 @@ class HomeCategoriesSuggested extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       offset: Offset(1, -3),
-                      color: Theme.of(context).accentColor.withOpacity(0.2),
+                      color: fifthColor.withOpacity(0.2),
                       blurRadius: 2,
                       spreadRadius: 1,
                     ),

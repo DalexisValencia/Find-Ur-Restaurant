@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:restaurants/tabs/TabsNavigation/tabs__bottomNavigationBar--item.dart';
 import 'package:restaurants/tabs/TabsNavigation/tabs__bottomNavigationBar--item__card.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class TabsBottomNavigationBar extends StatelessWidget {
   final TabController? controller;
@@ -20,7 +21,7 @@ class TabsBottomNavigationBar extends StatelessWidget {
         controller: controller,
         labelPadding: EdgeInsets.only(right: 5),
         labelColor: Theme.of(context).primaryColorDark,
-        unselectedLabelColor: Theme.of(context).accentColor,
+        unselectedLabelColor: fifthColor,
         indicatorColor: Color(0X000000),
         onTap: (tab) {
           changeTabs!(tab);

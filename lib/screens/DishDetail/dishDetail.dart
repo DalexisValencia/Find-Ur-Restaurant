@@ -99,7 +99,7 @@ class _PlateDetailScreenState extends State<PlateDetailScreen> {
           child: CircularProgressIndicator(
             backgroundColor: Theme.of(context).primaryColor,
             valueColor: AlwaysStoppedAnimation<Color>(
-              Theme.of(context).buttonColor,
+              fourthColor,
             ),
           ),
         ),

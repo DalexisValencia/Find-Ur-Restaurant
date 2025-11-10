@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class CardCarAddAmount extends StatelessWidget {
   final Function? add;
@@ -24,7 +25,7 @@ class CardCarAddAmount extends StatelessWidget {
             child: GestureDetector(
               onTap: () => add!(),
               child: Container(
-                color: Theme.of(context).buttonColor,
+                color: fourthColor,
                 child: Center(
                   child: Text(
                     "+",
@@ -43,7 +44,7 @@ class CardCarAddAmount extends StatelessWidget {
             child: Center(
               child: Text(
                 amount!.toString(),
-                style: Theme.of(context).textTheme.button!.copyWith(
+                style: Theme.of(context).textTheme.labelLarge!.copyWith(
                       fontSize: 12,
                       color: Theme.of(context).primaryColorDark,
                     ),
@@ -56,7 +57,7 @@ class CardCarAddAmount extends StatelessWidget {
               child: Container(
                 color: amount == 1
                     ? Theme.of(context).primaryColor.withOpacity(0.4)
-                    : Theme.of(context).buttonColor,
+                    : fourthColor,
                 child: Center(
                   child: Text(
                     "-",

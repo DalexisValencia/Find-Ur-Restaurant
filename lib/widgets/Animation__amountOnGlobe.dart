@@ -1,6 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class AnimationAmountGlobeCart extends StatefulWidget {
   final int? amout;
@@ -76,7 +76,7 @@ class _AnimationAmountGlobeCartState extends State<AnimationAmountGlobeCart>
           width: 16,
           height: 16,
           decoration: BoxDecoration(
-            color: Theme.of(context).buttonColor,
+            color: fourthColor,
             borderRadius: BorderRadius.circular(20),
           ),
           child: AnimatedOpacity(
@@ -89,7 +89,7 @@ class _AnimationAmountGlobeCartState extends State<AnimationAmountGlobeCart>
                 widget.amout == 0 || widget.amout == null
                     ? ''
                     : widget.amout.toString(),
-                style: Theme.of(context).textTheme.caption!.copyWith(
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
                       fontSize: widget.amout! >= 10 ? 7 : 9,
                       fontWeight: FontWeight.w500,
                       color: Theme.of(context).primaryColorLight,

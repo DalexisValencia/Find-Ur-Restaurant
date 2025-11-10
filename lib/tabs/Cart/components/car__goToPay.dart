@@ -12,7 +12,7 @@ class GoToPay extends StatelessWidget {
         horizontal: MediaQuery.of(context).size.width * defaultPadding,
       ),
       decoration: BoxDecoration(
-        color: Theme.of(context).buttonColor,
+        color: fourthColor,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -23,7 +23,7 @@ class GoToPay extends StatelessWidget {
               return RichText(
                 text: TextSpan(
                     text: 'TOTAL: ',
-                    style: Theme.of(context).textTheme.button!.copyWith(
+                    style: Theme.of(context).textTheme.labelLarge!.copyWith(
                           color: Theme.of(context).primaryColorLight,
                           fontWeight: FontWeight.w800,
                         ),
@@ -44,8 +44,8 @@ class GoToPay extends StatelessWidget {
             elevation: 0,
             child: Text(
               "Go Pay",
-              style: Theme.of(context).textTheme.caption!.copyWith(
-                    color: Theme.of(context).buttonColor,
+              style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    color: fourthColor,
                     fontWeight: FontWeight.w700,
                   ),
             ),

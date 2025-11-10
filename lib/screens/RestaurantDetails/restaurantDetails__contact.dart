@@ -87,7 +87,7 @@ class _RestaurantDetailsContactState extends State<RestaurantDetailsContact> {
                             alertSnackBar,
                             style: Theme.of(context)
                                 .textTheme
-                                .bodyText1!
+                                .bodyMedium!
                                 .copyWith(
                                   color: Theme.of(context).primaryColorLight,
                                 ),
@@ -106,9 +106,9 @@ class _RestaurantDetailsContactState extends State<RestaurantDetailsContact> {
                           e.key!,
                           style: Theme.of(context)
                               .textTheme
-                              .bodyText1!
+                              .bodyMedium!
                               .copyWith(
-                                  color: Theme.of(context).buttonColor,
+                                  color: fourthColor,
                                   fontWeight: FontWeight.w500),
                         ))
                       ],

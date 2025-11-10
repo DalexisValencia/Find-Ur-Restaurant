@@ -94,7 +94,7 @@ class _HightlightResturantsCardState extends State<HightlightResturantsCard> {
         ),
         border: Border.all(
           color: widget.selected!
-              ? Theme.of(context).buttonColor
+              ? fourthColor
               : Colors.transparent,
           width: borderWidthSelected + 1,
         ),
@@ -109,11 +109,11 @@ class _HightlightResturantsCardState extends State<HightlightResturantsCard> {
         ),
         onPressed: () => goRestaurantDetails(),
         color: widget.selected!
-            ? Theme.of(context).buttonColor.withOpacity(0.4)
+            ? fourthColor.withOpacity(0.4)
             : Colors.transparent,
-        splashColor: Theme.of(context).buttonColor,
+        splashColor: fourthColor,
         hoverColor: Colors.red,
-        highlightColor: Theme.of(context).buttonColor.withOpacity(0.2),
+        highlightColor: fourthColor.withOpacity(0.2),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[

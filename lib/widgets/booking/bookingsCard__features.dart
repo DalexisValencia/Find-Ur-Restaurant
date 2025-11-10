@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restaurants/widgets/Card__CustomChip.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class BookingCardFeatures extends StatelessWidget {
   final String? booking;
@@ -30,7 +31,7 @@ class BookingCardFeatures extends StatelessWidget {
                 restaurantNameInBooking.length > 14
                     ? restaurantNameInBooking.substring(0, 14) + '...'
                     : restaurantNameInBooking,
-                style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                       color: Theme.of(context).primaryColorDark,
                       fontWeight: FontWeight.w700,
                       fontSize: 14,
@@ -56,14 +57,14 @@ class BookingCardFeatures extends StatelessWidget {
               text: 'Hoy',
               textColor: booking != 'today'
                   ? Theme.of(context).primaryColor
-                  : Theme.of(context).buttonColor,
+                  : fourthColor,
               textSize: 12.5,
               icon: booking != 'today'
                   ? Icons.hourglass_top_rounded
                   : Icons.hourglass_full_rounded,
               iconColor: booking != 'today'
                   ? Theme.of(context).primaryColor
-                  : Theme.of(context).buttonColor,
+                  : fourthColor,
               iconSize: 13,
             ), // assignment_rounded // cuando sea hoy assignment_turned_in
           ],
@@ -73,7 +74,7 @@ class BookingCardFeatures extends StatelessWidget {
           child: RichText(
             text: TextSpan(
               text: 'A familiar table ',
-              style: Theme.of(context).textTheme.caption!.copyWith(
+              style: Theme.of(context).textTheme.bodySmall!.copyWith(
                   color: Theme.of(context).primaryColorDark,
                   fontWeight: FontWeight.w300,
                   fontSize: 11),

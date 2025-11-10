@@ -84,9 +84,9 @@ class _AmountDishesState extends State<AmountDishes> {
                           "\$${_priceDish(state.props[0])}",
                           style: Theme.of(context)
                               .textTheme
-                              .headline5!
+                              .titleLarge!
                               .copyWith(
-                                  color: Theme.of(context).buttonColor,
+                                  color: fourthColor,
                                   fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -97,7 +97,7 @@ class _AmountDishesState extends State<AmountDishes> {
                           MaterialButton(
                             minWidth: 40,
                             elevation: 0,
-                            color: Theme.of(context).buttonColor,
+                            color: fourthColor,
                             padding: EdgeInsets.all(0),
                             onPressed: () => _amountproduct(
                               'remove',
@@ -107,7 +107,7 @@ class _AmountDishesState extends State<AmountDishes> {
                               "-",
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline6!
+                                  .titleLarge!
                                   .copyWith(
                                     color: Theme.of(context).primaryColorLight,
                                     fontWeight: FontWeight.bold,
@@ -137,7 +137,7 @@ class _AmountDishesState extends State<AmountDishes> {
                           MaterialButton(
                             minWidth: 40,
                             elevation: 0,
-                            color: Theme.of(context).buttonColor,
+                            color: fourthColor,
                             padding: EdgeInsets.all(0),
                             onPressed: () => _amountproduct(
                               'add',
@@ -147,7 +147,7 @@ class _AmountDishesState extends State<AmountDishes> {
                               "+",
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline6!
+                                  .titleLarge!
                                   .copyWith(
                                     color: Theme.of(context).primaryColorLight,
                                     fontWeight: FontWeight.bold,

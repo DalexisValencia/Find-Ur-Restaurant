@@ -1,5 +1,6 @@
 import 'package:restaurants/widgets/Button_roundWithIcon.dart';
 import 'package:flutter/material.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class SearchButton extends StatelessWidget {
   final String? category;
@@ -17,7 +18,7 @@ class SearchButton extends StatelessWidget {
         icon: Icons.search,
         color:
             iconColor == null ? Theme.of(context).primaryColorDark : iconColor!,
-        bgColor: Theme.of(context).accentColor.withOpacity(0.4),
+        bgColor: fifthColor.withOpacity(0.4),
         trigger: () {
           print('buscar por: $category');
         },

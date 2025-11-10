@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class NewLauchCardCommentSeeAll extends StatelessWidget {
   @override
@@ -8,7 +9,7 @@ class NewLauchCardCommentSeeAll extends StatelessWidget {
       padding: EdgeInsets.all(0),
       width: MediaQuery.of(context).size.width,
       child: MaterialButton(
-        splashColor: Theme.of(context).buttonColor,
+        splashColor: fourthColor,
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),

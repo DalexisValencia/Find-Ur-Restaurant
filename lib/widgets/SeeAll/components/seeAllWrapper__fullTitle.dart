@@ -23,7 +23,7 @@ class _FullSectionTitleState extends State<FullSectionTitle> {
         children: <Widget>[
           Text(
             widget.title!,
-            style: Theme.of(context).textTheme.bodyText1!.copyWith(
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                 color: Theme.of(context).primaryColorDark,
                 fontWeight: FontWeight.w800),
           ),

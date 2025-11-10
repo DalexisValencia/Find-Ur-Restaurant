@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restaurants/interfaces/Dishes.dart';
+import 'package:restaurants/constants/contansts.dart';
 
 class PromotionCardRating extends StatelessWidget {
   final Dishes? dish;
@@ -17,12 +18,12 @@ class PromotionCardRating extends StatelessWidget {
             List<Widget> starts = [];
             var obj = [1, 2, 3, 4, 5]; // Calificamos las 5 estrellas
             for (var prop in obj) {
-              Color _startColor = Theme.of(context).accentColor;
+              Color _startColor = fifthColor;
               if (prop <= dish!.rating!.toInt()) {
-                _startColor = Theme.of(context).buttonColor;
+                _startColor = fourthColor;
               }
               if (prop > dish!.rating!.toInt()) {
-                _startColor = Theme.of(context).accentColor;
+                _startColor = fifthColor;
               }
               starts.add(
                 Icon(

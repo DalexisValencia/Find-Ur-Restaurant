@@ -33,17 +33,17 @@ class CardCarFeatures extends StatelessWidget {
                 ),
                 CustomChip(
                   text: formatterPrice(this.dish!.price!),
-                  textColor: Theme.of(context).buttonColor,
+                  textColor: fourthColor,
                   textSize: 12.5,
                   icon: Icons.monetization_on,
-                  iconColor: Theme.of(context).buttonColor,
+                  iconColor: fourthColor,
                   iconSize: 13,
                 ),
               ],
             ),
             Text(
               this.dish!.name!,
-              style: Theme.of(context).textTheme.bodyText1!.copyWith(
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     color: Theme.of(context).primaryColorDark,
                     fontWeight: FontWeight.w700,
                     fontSize: 13,
@@ -53,7 +53,7 @@ class CardCarFeatures extends StatelessWidget {
               this.dish!.details!.length > 55
                   ? this.dish!.details!.substring(0, 58) + " ... "
                   : this.dish!.details!,
-              style: Theme.of(context).textTheme.overline!.copyWith(
+              style: Theme.of(context).textTheme.labelSmall!.copyWith(
                     letterSpacing: 0,
                     color: Theme.of(context).primaryColor,
                   ),
@@ -63,8 +63,8 @@ class CardCarFeatures extends StatelessWidget {
               children: [
                 Text(
                   "\$${formatterPrice(this.dish!.finalPrice)}",
-                  style: Theme.of(context).textTheme.caption!.copyWith(
-                        color: Theme.of(context).buttonColor,
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                        color: fourthColor,
                         fontWeight: FontWeight.w700,
                       ),
                 ),
@@ -73,7 +73,7 @@ class CardCarFeatures extends StatelessWidget {
                   visible: this.dish!.promotionLabel!.discounts! > 0,
                   child: Text(
                     "- \$${formatterPrice(this.dish!.promotionLabel!.discounts)}",
-                    style: Theme.of(context).textTheme.caption!.copyWith(
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
                           color: Theme.of(context).primaryColorDark,
                           decoration: TextDecoration.lineThrough,
                         ),
