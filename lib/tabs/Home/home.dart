@@ -10,10 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class HomePage extends StatefulWidget {
-  final TabController? controller;
   final bool? animateScreen;
   HomePage({
-    this.controller,
     this.animateScreen,
   });
   @override

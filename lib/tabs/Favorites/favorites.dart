@@ -12,12 +12,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FavoritesScreen extends StatefulWidget {
   final String? from;
-  final TabController? controller;
 
   FavoritesScreen({
     Key? key,
     this.from,
-    this.controller,
   }) : super(key: key);
 
   @override
@@ -83,9 +81,9 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                       );
                     },
                     goBack: () {
-                      if (widget.from == 'tabs') {
+                      /* if (widget.from == 'tabs') {
                         widget.controller!.animateTo(0);
-                      }
+                      }*/
                       if (widget.from == 'nav') {
                         // print("volvemos");
                         Navigator.pop(context);

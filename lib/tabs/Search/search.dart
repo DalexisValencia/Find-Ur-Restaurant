@@ -13,11 +13,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ScaffoldSearch extends StatefulWidget {
   final String? from;
-  final TabController? controller;
+
   ScaffoldSearch({
     Key? key,
     this.from,
-    this.controller,
   }) : super(key: key);
 
   @override
@@ -78,7 +77,6 @@ class _ScaffoldSearchState extends State<ScaffoldSearch> {
                     width: totalWidth,
                     child: FixedTopHeader(
                       from: widget.from,
-                      controller: widget.controller,
                     ),
                   ),
                 ),
