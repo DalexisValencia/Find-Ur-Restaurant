@@ -37,6 +37,7 @@ class _FavoriteListScreenState extends State<FavoriteListScreen> {
                   state.props[0] as List<Restaurants>;
               List<Dishes> dishes = state.props[1] as List<Dishes>;
               List<dynamic> selecteds = state.props[2] as List<dynamic>;
+
               return Column(
                 children: [
                   dishes.isEmpty && restaurants.isEmpty

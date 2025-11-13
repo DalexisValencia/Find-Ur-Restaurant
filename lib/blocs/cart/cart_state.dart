@@ -19,6 +19,7 @@ class CartInitial extends CartState {
     this.amount,
     this.selecteds,
   });
+  
   @override
   List<Object> get props => [
         dishes!,
@@ -33,28 +34,25 @@ class CartInitial extends CartState {
 }
 
 class CartFetched extends CartState {
-  // final List<int> dishes;
   final List<Dishes>? dishes;
   final double? total;
   final int? amount;
-  // final List<Dishes>? selecteds;
-  CartFetched(
+  final List<Dishes>? selecteds;
+
+  CartFetched({
     this.dishes,
     this.total,
     this.amount,
-    // this.selecteds,
-  );
+    this.selecteds,
+  });
 
   @override
   List<Object> get props => [
         dishes!,
         total!,
         amount!,
-        // selecteds!,
+        selecteds!,
       ];
-
-  @override
-  // List<Object> get props => ["esto"];
 
   @override
   String toString() =>

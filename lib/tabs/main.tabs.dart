@@ -18,8 +18,8 @@ class MainTabsWrapper extends StatefulWidget {
 
 class _MainTabsWrapperState extends State<MainTabsWrapper>
     with TickerProviderStateMixin {
-  // late CartBloc cartBloc;
-  // late FavoritesBloc favoriteBloc;
+  late CartBloc cartBloc;
+  late FavoritesBloc favoriteBloc;
   int tabsIndex = 0;
 
   void goToTab(int tab) {
@@ -30,15 +30,14 @@ class _MainTabsWrapperState extends State<MainTabsWrapper>
 
   @override
   void initState() {
-    // cartBloc = BlocProvider.of<CartBloc>(context);
-    // favoriteBloc = BlocProvider.of<FavoritesBloc>(context);
+    cartBloc = BlocProvider.of<CartBloc>(context);
+    favoriteBloc = BlocProvider.of<FavoritesBloc>(context);
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return
-    /* MultiBlocProvider(
+    return MultiBlocProvider(
       providers: [
         BlocProvider<DiscoveryBloc>(
           create: (BuildContext context) => DiscoveryBloc(),
@@ -50,24 +49,17 @@ class _MainTabsWrapperState extends State<MainTabsWrapper>
           create: (BuildContext context) => favoriteBloc,
         )
       ],
-      child: */
-      Scaffold(
+      child: Scaffold(
         body: <Widget>[
           HomePage(
             animateScreen: true,
           ),
-          ScaffoldSearch(
-              from: 'tabs',
-            ),
-         /* BlocProvider(
-            create: (BuildContext context) => SearchBloc()
-              ..add(
-                SearchInit(findIn: 'all'),
-              ),
+         BlocProvider(
+            create: (BuildContext context) => SearchBloc(),
             child: ScaffoldSearch(
               from: 'tabs',
             ),
-          ),*/
+          ),
           BookingsScreen(),
           FavoritesScreen(
             from: 'tabs',
@@ -110,7 +102,7 @@ class _MainTabsWrapperState extends State<MainTabsWrapper>
             ),
           ],
         ),
-      );
-    // );
+      ),
+    );
   }
 }

@@ -11,6 +11,7 @@ class FavoritesInitial extends FavoritesState {
   final List<Restaurants>? restaurants;
   final List<Dishes>? dishes;
   final List<dynamic>? selecteds;
+
   FavoritesInitial({
     this.restaurants,
     this.dishes,
@@ -18,7 +19,7 @@ class FavoritesInitial extends FavoritesState {
   });
 
   @override
-  List<Object> get props => [restaurants!, dishes!, selecteds!];
+  List<Object> get props => [restaurants ?? [], dishes ?? [], selecteds ?? []];
 
   @override
   String toString() =>
@@ -37,7 +38,7 @@ class FavoritesFetched extends FavoritesState {
   });
 
   @override
-  List<Object> get props => [restaurants!, dishes!, selecteds!];
+  List<Object> get props => [restaurants ?? [], dishes ?? [], selecteds ?? []];
 
   @override
   String toString() =>

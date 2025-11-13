@@ -63,7 +63,7 @@ class FixedTopHeaderState extends State<FixedTopHeader> {
   Widget _iconTextFormField() {
     return BlocBuilder<SearchBloc, SearchState>(
       builder: (BuildContext context, SearchState state) {
-        SearchInitInterface modelSearch = state.props[0] as SearchInitInterface;
+       // SearchInitInterface modelSearch = state.props[0] as SearchInitInterface;
         return GestureDetector(
           child: Container(
             width: 40,
@@ -80,9 +80,10 @@ class FixedTopHeaderState extends State<FixedTopHeader> {
               color: Colors.transparent,
               splashColor: fourthColor,
               child: Icon(
-                modelSearch.results!.length >= 1 && searcController.text != ''
+                /* modelSearch.results!.length >= 1 && searcController.text != ''
                     ? Icons.close
-                    : Icons.search,
+                    : Icons.search, */
+                    Icons.search,
                 size: 16,
                 color: Theme.of(context).primaryColor.withOpacity(0.8),
               ),
@@ -90,7 +91,7 @@ class FixedTopHeaderState extends State<FixedTopHeader> {
               onHighlightChanged: (val) {
                 //Se ejecuta cuando se deja de presionar el boton
                 if (val == false) {
-                  clickInIconTextFormField(modelSearch);
+                  clickInIconTextFormField("");
                 }
               },
             ),

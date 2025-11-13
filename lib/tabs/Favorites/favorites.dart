@@ -71,10 +71,10 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
             children: [
               BlocBuilder<FavoritesBloc, FavoritesState>(
                 builder: (BuildContext context, FavoritesState state) {
-                  List<dynamic> selecteds = state.props[2] as List<dynamic>;
+                  // List<dynamic> selecteds = state.props[2] as List<dynamic>;
                   return Navigation(
                     secondItem: 'trash',
-                    amout: selecteds.length,
+                    amout: 0,// selecteds.length,
                     onPressed: () {
                       instanceFavorite.add(
                         FavoriteRemove(),

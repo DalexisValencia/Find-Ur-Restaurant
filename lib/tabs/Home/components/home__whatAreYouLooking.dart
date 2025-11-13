@@ -1,3 +1,6 @@
+import 'package:restaurants/blocs/cart/cart_bloc.dart';
+import 'package:restaurants/blocs/favorites/favorites_bloc.dart';
+import 'package:restaurants/blocs/search/search_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 import 'package:restaurants/tabs/Search/search.dart';
 import 'package:flutter/material.dart';
@@ -27,13 +30,14 @@ class WhatAreYouLookinForForm extends StatefulWidget {
 }
 
 class _WhatAreYouLookinForFormState extends State<WhatAreYouLookinForForm> {
-  // SearchBloc searchBloc;
-  // late CartBloc cartBlocIntance;
-  // late FavoritesBloc favoriteBlocIntance;
+  late SearchBloc searchBloc;
+  late CartBloc cartBlocIntance;
+  late FavoritesBloc favoriteBlocIntance;
+
   @override
   void initState() {
-    // favoriteBlocIntance = BlocProvider.of<FavoritesBloc>(context);
-    // cartBlocIntance = BlocProvider.of<CartBloc>(context);
+    favoriteBlocIntance = BlocProvider.of<FavoritesBloc>(context);
+    cartBlocIntance = BlocProvider.of<CartBloc>(context);
     super.initState();
   }
 
@@ -46,16 +50,10 @@ class _WhatAreYouLookinForFormState extends State<WhatAreYouLookinForForm> {
         Widget screenSearch = ScaffoldSearch(
           from: 'nav',
         );
-        return screenSearch;
-        /* return MultiBlocProvider(
+        return MultiBlocProvider(
           providers: [
             BlocProvider<SearchBloc>(
-              create: (BuildContext context) => SearchBloc()
-                ..add(
-                  SearchInit(
-                    findIn: 'all',
-                  ),
-                ),
+              create: (BuildContext context) => SearchBloc(),
               child: screenSearch,
             ),
             BlocProvider<CartBloc>.value(
@@ -68,7 +66,7 @@ class _WhatAreYouLookinForFormState extends State<WhatAreYouLookinForForm> {
             ),
           ],
           child: screenSearch,
-        );*/
+        );
       },
       closedColor: Colors.transparent,
       openColor: Colors.transparent,

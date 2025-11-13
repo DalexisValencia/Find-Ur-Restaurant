@@ -11,15 +11,21 @@ part 'cart_state.dart';
 class CartBloc extends Bloc<CartEvent, CartState> {
   CartBloc()
       : super(
-          CartInitial(),
+          CartInitial(
+            dishes: [],
+            total: 0,
+            amount: 0,
+            selecteds: [],
+          ),
         ) {
     on<AddToCart>(
       (event, emit) {
         emit(
           CartFetched(
-            [],
-            0,
-            0,
+            dishes: [],
+            total: 0,
+            amount: 0,
+            selecteds: [],
           ),
         );
       },
@@ -28,9 +34,10 @@ class CartBloc extends Bloc<CartEvent, CartState> {
       (event, emit) {
         emit(
           CartFetched(
-            [],
-            0,
-            0,
+            dishes: [],
+            total: 0,
+            amount: 0,
+            selecteds: [],
           ),
         );
       },
@@ -39,9 +46,10 @@ class CartBloc extends Bloc<CartEvent, CartState> {
       (event, emit) {
         emit(
           CartFetched(
-            [],
-            0,
-            0,
+            dishes: [],
+            total: 0,
+            amount: 0,
+            selecteds: [],
           ),
         );
       },

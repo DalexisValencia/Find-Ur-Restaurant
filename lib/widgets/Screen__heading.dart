@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 class ScreenHeading extends StatelessWidget {
   final String? title;
   final String? subtitle;
+
   ScreenHeading({
     Key? key,
     this.title,
     this.subtitle,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(

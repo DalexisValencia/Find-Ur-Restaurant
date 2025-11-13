@@ -10,26 +10,54 @@ part 'favorites_state.dart';
 class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
   FavoritesBloc()
       : super(
-          FavoritesInitial(),
+          FavoritesInitial(
+            restaurants: [],
+            dishes: [],
+            selecteds: [],
+          ),
         ) {
     on<FavoriteAddRestaurant>(
       (event, emit) {
-        emit(FavoritesFetched());
+        emit(
+          FavoritesFetched(
+            restaurants: [],
+            dishes: [],
+            selecteds: [],
+          ),
+        );
       },
     );
     on<FavoriteRemove>(
       (event, emit) {
-        emit(FavoritesFetched());
+        emit(
+          FavoritesFetched(
+            restaurants: [],
+            dishes: [],
+            selecteds: [],
+          ),
+        );
       },
     );
     on<FavoriteAddDish>(
       (event, emit) {
-        emit(FavoritesFetched());
+        emit(
+          FavoritesFetched(
+            restaurants: [],
+            dishes: [],
+            selecteds: [],
+          ),
+        );
       },
     );
     on<FavoriteSelected>(
       (event, emit) {
-        emit(FavoritesFetched());
+        emit(
+          FavoritesFetched(
+            restaurants: [],
+            dishes: [],
+            selecteds: [],
+          ),
+        );
       },
     );
   }
