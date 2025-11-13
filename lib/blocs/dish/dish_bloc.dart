@@ -13,17 +13,32 @@ class DishBloc extends Bloc<DishEvent, DishState> {
         ) {
     on<DishStart>(
       (event, emit) {
-        emit(DishFetched());
+        emit(
+          DishFetched(
+            dish: Dishes().copyWith(event.currentDish),
+          ),
+        );
       },
     );
     on<DishModifierEdit>(
       (event, emit) {
-        emit(DishFetched());
+        AditionalsOptions adpush = event.currentModifier as AditionalsOptions;
+        Dishes platos = state.props[0] as Dishes;
+        platos.additions![0].children!.add(adpush);
+        emit(
+          DishFetched(
+            dish: platos,
+          ),
+        );
       },
     );
     on<DishClean>(
       (event, emit) {
-        emit(DishFetched());
+        emit(
+          DishFetched(
+            dish: null,
+          ),
+        );
       },
     );
   }

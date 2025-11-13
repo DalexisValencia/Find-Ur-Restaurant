@@ -16,14 +16,11 @@ class DishEmpty extends DishState {
 }
 
 class DishInitial extends DishState {
-  final Dishes? dish;
-  DishInitial({this.dish});
+  @override
+  List<Object> get props => [];
 
   @override
-  List<Object> get props => [dish!];
-
-  @override
-  String toString() => 'DishInitial {Search by: $dish}';
+  String toString() => 'DishInitial {props are initial empty}';
 }
 
 class DishFetched extends DishState {

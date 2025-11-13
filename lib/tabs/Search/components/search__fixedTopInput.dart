@@ -179,7 +179,7 @@ class FixedTopHeaderState extends State<FixedTopHeader> {
               Navigator.pop(context);
             }
             if (widget.from == 'tabs') {
-              widget.controller!.animateTo(0);
+              // widget.controller!.animateTo(0);
             }
           },
         ),

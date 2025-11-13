@@ -109,6 +109,7 @@ class _PlateDetailScreenState extends State<PlateDetailScreen> {
 
   Widget _plateDetailBody(DishState state) {
     Dishes dish = state.props[0] as Dishes;
+    
     return Expanded(
       child: AnimatedOpacity(
         opacity: !animatedOpacity ? 1 : 0,
