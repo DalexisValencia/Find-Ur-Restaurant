@@ -1,5 +1,8 @@
 import 'dart:async';
 
+import 'package:restaurants/blocs/cart/cart_bloc.dart';
+import 'package:restaurants/blocs/discovery/discovery_bloc.dart';
+import 'package:restaurants/blocs/favorites/favorites_bloc.dart';
 import 'package:restaurants/interfaces/categories.dart';
 import 'package:restaurants/screens/Disscover/disscover.dart';
 import 'package:flutter/material.dart';
@@ -19,15 +22,24 @@ class HomeCategoriesSuggestedCard extends StatefulWidget {
 
 class _HomeCategoriesSuggestedCardState
     extends State<HomeCategoriesSuggestedCard> {
-  // DiscoveryBloc? blocDiscovery;
-  // CartBloc? blocCartInstance;
-  // FavoritesBloc? favoriteBlocInstance;
+  DiscoveryBloc? blocDiscovery;
+  CartBloc? blocCartInstance;
+  FavoritesBloc? favoriteBlocInstance;
+
   @override
   void initState() {
-    // blocDiscovery = BlocProvider.of<DiscoveryBloc>(context);
-    // blocCartInstance = BlocProvider.of<CartBloc>(context);
-    // favoriteBlocInstance = BlocProvider.of<FavoritesBloc>(context);
+    blocDiscovery = BlocProvider.of<DiscoveryBloc>(context);
+    blocCartInstance = BlocProvider.of<CartBloc>(context);
+    favoriteBlocInstance = BlocProvider.of<FavoritesBloc>(context);
     super.initState();
+  }
+
+  addToDiscovery(name) {
+    blocDiscovery!.add(
+      DiscoveryStart(
+        category: name,
+      ),
+    );
   }
 
   @override
@@ -40,12 +52,8 @@ class _HomeCategoriesSuggestedCardState
         Timer(
           Duration(milliseconds: 200),
           () {
-            /*blocDiscovery!.add(
-              DiscoveryStart(
-                category: widget.category!.name!,
-              ),
-            );*/
-           /* Navigator.of(context).push(
+            addToDiscovery( widget.category!.name!);
+           Navigator.of(context).push(
               MaterialPageRoute<DiscoverScaffold>(
                 builder: (BuildContext context) {
                   return MultiBlocProvider(
@@ -67,7 +75,7 @@ class _HomeCategoriesSuggestedCardState
                   );
                 },
               ),
-            );*/
+            );
           },
         );
       },
