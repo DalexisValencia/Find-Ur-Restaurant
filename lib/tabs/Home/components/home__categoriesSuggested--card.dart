@@ -22,14 +22,14 @@ class HomeCategoriesSuggestedCard extends StatefulWidget {
 
 class _HomeCategoriesSuggestedCardState
     extends State<HomeCategoriesSuggestedCard> {
-  DiscoveryBloc? blocDiscovery;
-  CartBloc? blocCartInstance;
-  FavoritesBloc? favoriteBlocInstance;
+  // DiscoveryBloc? blocDiscovery;
+  // CartBloc? blocCartInstance;
+  // FavoritesBloc? favoriteBlocInstance;
   @override
   void initState() {
-    blocDiscovery = BlocProvider.of<DiscoveryBloc>(context);
-    blocCartInstance = BlocProvider.of<CartBloc>(context);
-    favoriteBlocInstance = BlocProvider.of<FavoritesBloc>(context);
+    // blocDiscovery = BlocProvider.of<DiscoveryBloc>(context);
+    // blocCartInstance = BlocProvider.of<CartBloc>(context);
+    // favoriteBlocInstance = BlocProvider.of<FavoritesBloc>(context);
     super.initState();
   }
 
@@ -43,12 +43,12 @@ class _HomeCategoriesSuggestedCardState
         Timer(
           Duration(milliseconds: 200),
           () {
-            blocDiscovery!.add(
+            /*blocDiscovery!.add(
               DiscoveryStart(
                 category: widget.category!.name!,
               ),
-            );
-            Navigator.of(context).push(
+            );*/
+           /* Navigator.of(context).push(
               MaterialPageRoute<DiscoverScaffold>(
                 builder: (BuildContext context) {
                   return MultiBlocProvider(
@@ -70,7 +70,7 @@ class _HomeCategoriesSuggestedCardState
                   );
                 },
               ),
-            );
+            );*/
           },
         );
       },

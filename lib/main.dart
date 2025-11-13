@@ -59,7 +59,9 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return splashScreen
         ? SplashScreen()
-        : MultiBlocProvider(
+        : MainTabsWrapper();
+        
+        /* MultiBlocProvider(
             providers: [
               BlocProvider<CartBloc>(
                 create: (context) => CartBloc(),
@@ -69,6 +71,6 @@ class _MainScreenState extends State<MainScreen> {
               ),
             ],
             child: MainTabsWrapper(),
-          );
+          );*/
   }
 }

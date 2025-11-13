@@ -20,13 +20,13 @@ class FixedTopHeader extends StatefulWidget {
 class FixedTopHeaderState extends State<FixedTopHeader> {
   FocusNode _focus = new FocusNode();
   final TextEditingController searcController = new TextEditingController();
-  late SearchBloc searchBloc;
+  // late SearchBloc searchBloc;
   @override
   void initState() {
     super.initState();
     //_focus.hasFocus
     // _focus.addListener(widget.onfocusSearch);
-    searchBloc = BlocProvider.of<SearchBloc>(context);
+    // searchBloc = BlocProvider.of<SearchBloc>(context);
   }
 
   void clickInIconTextFormField(resulst) {
@@ -38,9 +38,9 @@ class FixedTopHeaderState extends State<FixedTopHeader> {
     else if (searcController.value.text != '') {
       //si hay resultados limpiamos
       if (resulst.results.length >= 1) {
-        searchBloc.add(
+        /*searchBloc.add(
           ClearSearch(),
-        );
+        );*/
       }
       FocusScope.of(context).unfocus();
       searcController.clear();
@@ -108,7 +108,7 @@ class FixedTopHeaderState extends State<FixedTopHeader> {
           child: Container(
             child: TextFormField(
               onChanged: (val) {
-                if (val.length >= 1) {
+                /* if (val.length >= 1) {
                   searchBloc.add(
                     Searching(term: val),
                   );
@@ -116,7 +116,7 @@ class FixedTopHeaderState extends State<FixedTopHeader> {
                   searchBloc.add(
                     ClearSearch(),
                   );
-                }
+                } */
               },
               controller: searcController,
               onFieldSubmitted: (e) {},

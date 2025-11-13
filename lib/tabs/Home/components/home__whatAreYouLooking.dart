@@ -31,12 +31,12 @@ class WhatAreYouLookinForForm extends StatefulWidget {
 
 class _WhatAreYouLookinForFormState extends State<WhatAreYouLookinForForm> {
   // SearchBloc searchBloc;
-  late CartBloc cartBlocIntance;
-  late FavoritesBloc favoriteBlocIntance;
+  // late CartBloc cartBlocIntance;
+  // late FavoritesBloc favoriteBlocIntance;
   @override
   void initState() {
-    favoriteBlocIntance = BlocProvider.of<FavoritesBloc>(context);
-    cartBlocIntance = BlocProvider.of<CartBloc>(context);
+    // favoriteBlocIntance = BlocProvider.of<FavoritesBloc>(context);
+    // cartBlocIntance = BlocProvider.of<CartBloc>(context);
     super.initState();
   }
 
@@ -49,7 +49,8 @@ class _WhatAreYouLookinForFormState extends State<WhatAreYouLookinForForm> {
         Widget screenSearch = ScaffoldSearch(
           from: 'nav',
         );
-        return MultiBlocProvider(
+        return screenSearch;
+        /* return MultiBlocProvider(
           providers: [
             BlocProvider<SearchBloc>(
               create: (BuildContext context) => SearchBloc()
@@ -70,7 +71,7 @@ class _WhatAreYouLookinForFormState extends State<WhatAreYouLookinForForm> {
             ),
           ],
           child: screenSearch,
-        );
+        );*/
       },
       closedColor: Colors.transparent,
       openColor: Colors.transparent,

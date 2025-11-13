@@ -1,6 +1,6 @@
 import 'package:restaurants/blocs/bloc/cart/bloc/cart_bloc.dart';
 import 'package:restaurants/blocs/bloc/favorites/bloc/favorites_bloc.dart';
-import 'package:restaurants/blocs/bloc/restaurant/bloc/detailsrestaurant_bloc.dart';
+import 'package:restaurants/blocs/bloc/restaurant/bloc/restaurantDetail_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 import 'package:restaurants/interfaces/Restaurants.dart';
 import 'package:restaurants/screens/RestaurantDetails/restaurantDetails.dart';

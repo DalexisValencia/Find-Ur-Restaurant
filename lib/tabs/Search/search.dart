@@ -62,7 +62,50 @@ class _ScaffoldSearchState extends State<ScaffoldSearch> {
       backgroundColor: Theme.of(context).primaryColorLight,
       body: Container(
         padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
-        child: BlocBuilder<SearchBloc, SearchState>(
+        child: Column(
+              children: <Widget>[
+                Container(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: withDefaultPadding - 10,
+                    ),
+                    height: defaultHeaderCustomHeight,
+                    width: totalWidth,
+                    child: FixedTopHeader(
+                      from: widget.from,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: AnimatedOpacity(
+                    duration: Duration(milliseconds: 200),
+                    opacity: animateOpacity ? 0 : 1,
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      child: SingleChildScrollView(
+                        child: Container(
+                          width: totalWidth,
+                          child: CustomContainerAnimation(
+                            animationChildren: animatedChildren,
+                            /*children: KeyboardVisibilityBuilder(
+                              builder: (context, isKeyboardVisible) {
+                                return !isKeyboardVisible &&
+                                        suggestedSearches.results!.length == 0
+                                    ? Suggested(
+                                        suggestedSearches: suggestedSearches,
+                                      )
+                                    : Results();
+                              },
+                            ),*/
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+        /* child: BlocBuilder<SearchBloc, SearchState>(
           builder: (context, state) {
             SearchInitInterface suggestedSearches =
                 state.props[0] as SearchInitInterface;
@@ -106,11 +149,11 @@ class _ScaffoldSearchState extends State<ScaffoldSearch> {
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             );
           },
-        ),
+        ),*/
       ),
     );
   }
