@@ -1,4 +1,4 @@
-import 'package:restaurants/blocs/bloc/dishAmount/bloc/dishamount_bloc.dart';
+import 'package:restaurants/blocs/dishAmount/dishamount_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

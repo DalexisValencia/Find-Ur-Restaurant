@@ -1,4 +1,4 @@
-import 'package:restaurants/blocs/bloc/search/bloc/search_bloc.dart';
+import 'package:restaurants/blocs/search/search_bloc.dart';
 import 'package:restaurants/interfaces/search.dart';
 import 'package:restaurants/widgets/Button_roundWithIcon.dart';
 import 'package:flutter/material.dart';

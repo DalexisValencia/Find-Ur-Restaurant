@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:restaurants/blocs/bloc/restaurant/bloc/restaurantDetail_bloc.dart';
+import 'package:restaurants/blocs/restaurantDetail/restaurantDetail_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 
 import 'package:restaurants/interfaces/Restaurants.dart';
@@ -139,8 +139,8 @@ class _RestaurantDetailWrapperState extends State<RestaurantDetailWrapper>
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: BlocBuilder<DetailsrestaurantBloc, DetailsrestaurantState>(
-          builder: (BuildContext context, DetailsrestaurantState state) {
+        body: BlocBuilder<RestaurantDetailBloc, RestaurantDetailState>(
+          builder: (BuildContext context, RestaurantDetailState state) {
             Restaurants currentRestaurant = state.props[0] as Restaurants;
             return SafeArea(
               child: Column(

@@ -1,4 +1,4 @@
-import 'package:restaurants/blocs/bloc/restaurant/bloc/restaurantDetail_bloc.dart';
+import 'package:restaurants/blocs/restaurantDetail/restaurantDetail_bloc.dart';
 import 'package:restaurants/interfaces/Restaurants.dart';
 import 'package:restaurants/widgets/restaurantCard/normal/restaurantCard.dart';
 import 'package:flutter/material.dart';
@@ -13,8 +13,8 @@ class FavoriteListCardRestaurant extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<DetailsrestaurantBloc>(
-      create: (BuildContext context) => DetailsrestaurantBloc(),
+    return BlocProvider<RestaurantDetailBloc>(
+      create: (BuildContext context) => RestaurantDetailBloc(),
       child: HightlightResturantsCard(
         hightlight: restaurant!,
         selected: selected!,

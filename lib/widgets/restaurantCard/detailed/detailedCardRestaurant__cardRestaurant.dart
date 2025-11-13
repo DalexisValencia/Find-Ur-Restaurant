@@ -1,6 +1,6 @@
-import 'package:restaurants/blocs/bloc/cart/bloc/cart_bloc.dart';
-import 'package:restaurants/blocs/bloc/favorites/bloc/favorites_bloc.dart';
-import 'package:restaurants/blocs/bloc/restaurant/bloc/restaurantDetail_bloc.dart';
+import 'package:restaurants/blocs/cart/cart_bloc.dart';
+import 'package:restaurants/blocs/favorites/favorites_bloc.dart';
+import 'package:restaurants/blocs/restaurantDetail/restaurantDetail_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 import 'package:restaurants/interfaces/Restaurants.dart';
 import 'package:restaurants/screens/RestaurantDetails/restaurantDetails.dart';
@@ -21,20 +21,20 @@ class RestaurantTopSummary extends StatefulWidget {
 }
 
 class _RestaurantTopSummaryState extends State<RestaurantTopSummary> {
-  late DetailsrestaurantBloc blocDetailResturant;
+  late RestaurantDetailBloc blocDetailResturant;
   late CartBloc cartBlocInstance;
   late FavoritesBloc favoriteBlocInstance;
   @override
   initState() {
     super.initState();
-    blocDetailResturant = BlocProvider.of<DetailsrestaurantBloc>(context);
+    blocDetailResturant = BlocProvider.of<RestaurantDetailBloc>(context);
     cartBlocInstance = BlocProvider.of<CartBloc>(context);
     favoriteBlocInstance = BlocProvider.of<FavoritesBloc>(context);
   }
 
   void goToDetailsRestaurants() {
     blocDetailResturant.add(
-      DetailsresturantSetCurrent(
+      SetCurrentRestaurant(
         restaurant: widget.resturant,
       ),
     );

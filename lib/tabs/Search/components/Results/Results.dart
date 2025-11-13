@@ -1,5 +1,5 @@
-import 'package:restaurants/blocs/bloc/dish/bloc/dish_bloc.dart';
-import 'package:restaurants/blocs/bloc/search/bloc/search_bloc.dart';
+import 'package:restaurants/blocs/dish/dish_bloc.dart';
+import 'package:restaurants/blocs/search/search_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 import 'package:restaurants/tabs/Search/components/Results/Results__container.dart';
 import 'package:restaurants/tabs/Search/components/Results/Results__recents.dart';
@@ -23,7 +23,9 @@ class _ResultsState extends State<Results> {
   void dispose() {
     super.dispose();
     searchBloc.add(
-      ClearSearch(),
+      ClearSearch(
+        term: '',
+      ),
     );
   }
 

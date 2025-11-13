@@ -1,4 +1,4 @@
-import 'package:restaurants/blocs/bloc/restaurant/bloc/restaurantDetail_bloc.dart';
+import 'package:restaurants/blocs/restaurantDetail/restaurantDetail_bloc.dart';
 import 'package:restaurants/interfaces/Dishes.dart';
 import 'package:restaurants/sections/horizontalListSuggestions/Suggested__horizontalList.dart';
 import 'package:restaurants/widgets/SeeAll/Screen__seeAllSection.dart';
@@ -17,11 +17,11 @@ class RestaurantDetailSuggestions extends StatefulWidget {
 
 class _RestaurantDetailSuggestionsState
     extends State<RestaurantDetailSuggestions> {
-  late DetailsrestaurantBloc instancerestaurantBloc;
+  late RestaurantDetailBloc instancerestaurantBloc;
   @override
   void initState() {
     super.initState();
-    instancerestaurantBloc = BlocProvider.of<DetailsrestaurantBloc>(context);
+    instancerestaurantBloc = BlocProvider.of<RestaurantDetailBloc>(context);
   }
 
   @override

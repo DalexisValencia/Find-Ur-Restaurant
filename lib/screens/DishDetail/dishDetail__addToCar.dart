@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:restaurants/blocs/bloc/additional/additionals_bloc.dart';
-import 'package:restaurants/blocs/bloc/cart/bloc/cart_bloc.dart';
-import 'package:restaurants/blocs/bloc/dishAmount/bloc/dishamount_bloc.dart';
+import 'package:restaurants/blocs/additional/additionals_bloc.dart';
+import 'package:restaurants/blocs/cart/cart_bloc.dart';
+import 'package:restaurants/blocs/dishAmount/dishamount_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 import 'package:restaurants/interfaces/Dishes.dart';
 import 'package:flutter/material.dart';

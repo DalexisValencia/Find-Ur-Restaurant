@@ -1,4 +1,4 @@
-import 'package:restaurants/blocs/bloc/restaurant/bloc/restaurantDetail_bloc.dart';
+import 'package:restaurants/blocs/restaurantDetail/restaurantDetail_bloc.dart';
 import 'package:restaurants/interfaces/Restaurants.dart';
 import 'package:restaurants/widgets/SeeAll/Screen__seeAllSection.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +17,7 @@ class TopRestaurants extends StatefulWidget {
 class _TopRestaurantsState extends State<TopRestaurants> {
   Widget _body() {
     return BlocProvider(
-      create: (BuildContext context) => DetailsrestaurantBloc(),
+      create: (BuildContext context) => RestaurantDetailBloc(),
       child: Builder(
         builder: (BuildContext context) {
           List<Widget> restaurants = [];

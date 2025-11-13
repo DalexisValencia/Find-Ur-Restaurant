@@ -1,4 +1,4 @@
-import 'package:restaurants/blocs/bloc/additional/additionals_bloc.dart';
+import 'package:restaurants/blocs/additional/additionals_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 import 'package:restaurants/interfaces/aditional.dart';
 import 'package:flutter/material.dart';

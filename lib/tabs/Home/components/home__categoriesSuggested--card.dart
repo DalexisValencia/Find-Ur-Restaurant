@@ -1,8 +1,5 @@
 import 'dart:async';
 
-import 'package:restaurants/blocs/bloc/cart/bloc/cart_bloc.dart';
-import 'package:restaurants/blocs/bloc/discovery/bloc/discovery_bloc.dart';
-import 'package:restaurants/blocs/bloc/favorites/bloc/favorites_bloc.dart';
 import 'package:restaurants/interfaces/categories.dart';
 import 'package:restaurants/screens/Disscover/disscover.dart';
 import 'package:flutter/material.dart';

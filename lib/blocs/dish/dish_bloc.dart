@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:restaurants/interfaces/Dishes.dart';
 import 'package:bloc/bloc.dart';
-import 'package:equatable/equatable.dart';
 import 'package:restaurants/interfaces/aditional.dart';
 part 'dish_event.dart';
 part 'dish_state.dart';

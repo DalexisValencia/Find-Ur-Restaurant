@@ -1,5 +1,5 @@
-import 'package:restaurants/blocs/bloc/favorites/bloc/favorites_bloc.dart';
-import 'package:restaurants/blocs/bloc/restaurant/bloc/restaurantDetail_bloc.dart';
+import 'package:restaurants/blocs/favorites/favorites_bloc.dart';
+import 'package:restaurants/blocs/restaurantDetail/restaurantDetail_bloc.dart';
 import 'package:restaurants/interfaces/Restaurants.dart';
 import 'package:restaurants/widgets/SeeAll/Screen__seeAllSection.dart';
 import 'package:restaurants/constants/contansts.dart';
@@ -39,7 +39,7 @@ class SuggestedRestaurants extends StatelessWidget {
         MediaQuery.of(context).size.width * defaultPadding;
     return Container(
       child: BlocProvider(
-        create: (BuildContext context) => DetailsrestaurantBloc(),
+        create: (BuildContext context) => RestaurantDetailBloc(),
         child: Column(
           children: <Widget>[
             SeeAllSuggested(

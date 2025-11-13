@@ -1,5 +1,5 @@
-import 'package:restaurants/blocs/bloc/dish/bloc/dish_bloc.dart';
-import 'package:restaurants/blocs/bloc/restaurant/bloc/restaurantDetail_bloc.dart';
+import 'package:restaurants/blocs/dish/dish_bloc.dart';
+import 'package:restaurants/blocs/restaurantDetail/restaurantDetail_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 import 'package:restaurants/interfaces/Dishes.dart';
 import 'package:restaurants/widgets/dishCard/promotions/promotionalCard.dart';
@@ -18,11 +18,11 @@ class RestaurantdetailHighlight extends StatefulWidget {
 }
 
 class _RestaurantdetailHighlightState extends State<RestaurantdetailHighlight> {
-  late DetailsrestaurantBloc restaurantBloc;
+  late RestaurantDetailBloc restaurantBloc;
   @override
   initState() {
     super.initState();
-    restaurantBloc = BlocProvider.of<DetailsrestaurantBloc>(context);
+    restaurantBloc = BlocProvider.of<RestaurantDetailBloc>(context);
   }
 
   @override

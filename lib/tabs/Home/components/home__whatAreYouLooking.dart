@@ -1,6 +1,3 @@
-import 'package:restaurants/blocs/bloc/cart/bloc/cart_bloc.dart';
-import 'package:restaurants/blocs/bloc/favorites/bloc/favorites_bloc.dart';
-import 'package:restaurants/blocs/bloc/search/bloc/search_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 import 'package:restaurants/tabs/Search/search.dart';
 import 'package:flutter/material.dart';

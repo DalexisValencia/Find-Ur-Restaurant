@@ -1,4 +1,4 @@
-import 'package:restaurants/blocs/bloc/search/bloc/search_bloc.dart';
+import 'package:restaurants/blocs/search/search_bloc.dart';
 import 'package:restaurants/interfaces/search.dart';
 import 'package:restaurants/tabs/Search/components/Results/components/Results__title.dart';
 import 'package:restaurants/widgets/dishCard/normal/dishCard.dart';

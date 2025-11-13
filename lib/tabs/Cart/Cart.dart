@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:restaurants/blocs/bloc/cart/bloc/cart_bloc.dart';
+import 'package:restaurants/blocs/cart/cart_bloc.dart';
 import 'package:restaurants/interfaces/Dishes.dart';
 import 'package:restaurants/tabs/Cart/components/car__list.dart';
 import 'package:restaurants/tabs/Cart/components/car__goToPay.dart';
@@ -110,10 +110,10 @@ class _ScreenCartState extends State<ScreenCart> {
                 },
               ),
               _bodyCart(
-                state is CartblocInitial || cartDishes.length == 0,
+                state is CartInitial || cartDishes.length == 0,
                 cartDishes,
               ),
-              state is CartblocInitial || cartDishes.length == 0
+              state is CartInitial || cartDishes.length == 0
                   ? SizedBox()
                   : GoToPay(),
             ],

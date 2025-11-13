@@ -1,7 +1,7 @@
-import 'package:restaurants/blocs/bloc/cart/bloc/cart_bloc.dart';
-import 'package:restaurants/blocs/bloc/discovery/bloc/discovery_bloc.dart';
-import 'package:restaurants/blocs/bloc/favorites/bloc/favorites_bloc.dart';
-import 'package:restaurants/blocs/bloc/search/bloc/search_bloc.dart';
+import 'package:restaurants/blocs/cart/cart_bloc.dart';
+import 'package:restaurants/blocs/discovery/discovery_bloc.dart';
+import 'package:restaurants/blocs/favorites/favorites_bloc.dart';
+import 'package:restaurants/blocs/search/search_bloc.dart';
 import 'package:restaurants/tabs/Bookings/bookings.dart';
 import 'package:restaurants/tabs/Cart/cart.dart';
 import 'package:restaurants/tabs/Favorites/favorites.dart';
@@ -38,7 +38,7 @@ class _MainTabsWrapperState extends State<MainTabsWrapper>
   @override
   Widget build(BuildContext context) {
     return
-        /* MultiBlocProvider(
+    /* MultiBlocProvider(
       providers: [
         BlocProvider<DiscoveryBloc>(
           create: (BuildContext context) => DiscoveryBloc(),
@@ -51,15 +51,15 @@ class _MainTabsWrapperState extends State<MainTabsWrapper>
         )
       ],
       child: */
-        Scaffold(
-      body: <Widget>[
-        HomePage(
-          animateScreen: true,
-        ),
-        ScaffoldSearch(
-          from: 'tabs',
-        ),
-        /* BlocProvider(
+      Scaffold(
+        body: <Widget>[
+          HomePage(
+            animateScreen: true,
+          ),
+          ScaffoldSearch(
+              from: 'tabs',
+            ),
+         /* BlocProvider(
             create: (BuildContext context) => SearchBloc()
               ..add(
                 SearchInit(findIn: 'all'),
@@ -68,49 +68,49 @@ class _MainTabsWrapperState extends State<MainTabsWrapper>
               from: 'tabs',
             ),
           ),*/
-        BookingsScreen(),
-        FavoritesScreen(
-          from: 'tabs',
+          BookingsScreen(),
+          FavoritesScreen(
+            from: 'tabs',
+          ),
+          ScreenCart(),
+        ][tabsIndex],
+        bottomNavigationBar: NavigationBar(
+          // labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
+          onDestinationSelected: (int index) {
+            goToTab(index);
+          },
+          backgroundColor: Colors.white,
+          indicatorColor: const Color.fromARGB(0, 168, 20, 20),
+          selectedIndex: tabsIndex,
+          destinations: <Widget>[
+            const NavigationDestination(
+              selectedIcon: Icon(Icons.home_filled),
+              icon: Icon(Icons.home_outlined),
+              label: 'Home',
+            ),
+            const NavigationDestination(
+              selectedIcon: Icon(Icons.restaurant),
+              icon: Icon(Icons.restaurant_outlined),
+              label: 'Delicious',
+            ),
+            const NavigationDestination(
+              selectedIcon: Icon(Icons.class_),
+              icon: Icon(Icons.class_outlined),
+              label: 'Bookings',
+            ),
+            const NavigationDestination(
+              selectedIcon: Icon(Icons.favorite),
+              icon: Icon(Icons.favorite_outline),
+              label: 'Favs',
+            ),
+            const NavigationDestination(
+              selectedIcon: Icon(Icons.shopping_cart),
+              icon: Icon(Icons.shopping_cart_outlined),
+              label: 'Cart',
+            ),
+          ],
         ),
-        ScreenCart(),
-      ][tabsIndex],
-      bottomNavigationBar: NavigationBar(
-        // labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
-        onDestinationSelected: (int index) {
-          goToTab(index);
-        },
-        backgroundColor: Colors.white,
-        indicatorColor: const Color.fromARGB(0, 168, 20, 20),
-        selectedIndex: tabsIndex,
-        destinations: <Widget>[
-          const NavigationDestination(
-            selectedIcon: Icon(Icons.home_filled),
-            icon: Icon(Icons.home_outlined),
-            label: 'Home',
-          ),
-          const NavigationDestination(
-            selectedIcon: Icon(Icons.restaurant),
-            icon: Icon(Icons.restaurant_outlined),
-            label: 'Delicious',
-          ),
-          const NavigationDestination(
-            selectedIcon: Icon(Icons.class_),
-            icon: Icon(Icons.class_outlined),
-            label: 'Bookings',
-          ),
-          const NavigationDestination(
-            selectedIcon: Icon(Icons.favorite),
-            icon: Icon(Icons.favorite_outline),
-            label: 'Favs',
-          ),
-          const NavigationDestination(
-            selectedIcon: Icon(Icons.shopping_cart),
-            icon: Icon(Icons.shopping_cart_outlined),
-            label: 'Cart',
-          ),
-        ],
-      ),
-    );
+      );
     // );
   }
 }

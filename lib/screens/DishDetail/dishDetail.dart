@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:restaurants/blocs/bloc/additional/additionals_bloc.dart';
-import 'package:restaurants/blocs/bloc/dish/bloc/dish_bloc.dart';
-import 'package:restaurants/blocs/bloc/dishAmount/bloc/dishamount_bloc.dart';
+import 'package:restaurants/blocs/additional/additionals_bloc.dart';
+import 'package:restaurants/blocs/dish/dish_bloc.dart';
+import 'package:restaurants/blocs/dishAmount/dishamount_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 import 'package:restaurants/interfaces/Dishes.dart';
 import 'package:restaurants/screens/DishDetail/Aditionals/dishDetail__additionals.dart';
@@ -77,7 +77,7 @@ class _PlateDetailScreenState extends State<PlateDetailScreen> {
         ),
       )
       ..stream.listen((state) {
-        if (state is DishCurrent) {
+        if (state is DishFetched) {
           startAnimationScreen();
         }
       });

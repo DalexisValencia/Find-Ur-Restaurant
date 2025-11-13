@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:restaurants/blocs/bloc/dish/bloc/dish_bloc.dart';
-import 'package:restaurants/blocs/bloc/restaurant/bloc/restaurantDetail_bloc.dart';
+import 'package:restaurants/blocs/restaurantDetail/restaurantDetail_bloc.dart';
+import 'package:restaurants/blocs/dish/dish_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 import 'package:restaurants/interfaces/Dishes.dart';
 import 'package:restaurants/interfaces/Restaurants.dart';
@@ -82,8 +82,8 @@ class _SeeMoreDishesByRestaurantState extends State<SeeMoreDishesByRestaurant> {
         height: MediaQuery.of(context).size.height -
             (MediaQuery.of(context).padding.top + defaultHeaderCustomHeight),
         child: SingleChildScrollView(
-          child: BlocBuilder<DetailsrestaurantBloc, DetailsrestaurantState>(
-            builder: (BuildContext context, DetailsrestaurantState state) {
+          child: BlocBuilder<RestaurantDetailBloc, RestaurantDetailState>(
+            builder: (BuildContext context, RestaurantDetailState state) {
               Restaurants restaurantState = state.props[0] as Restaurants;
               List<Dishes> completeList;
               String screenTitle = '';

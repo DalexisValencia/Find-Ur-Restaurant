@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:restaurants/blocs/bloc/search/bloc/search_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 import 'package:restaurants/interfaces/search.dart';
 import 'package:restaurants/tabs/Search/components/search__fixedTopInput.dart';

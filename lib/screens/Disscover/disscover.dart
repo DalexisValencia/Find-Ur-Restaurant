@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:restaurants/blocs/bloc/discovery/bloc/discovery_bloc.dart';
-import 'package:restaurants/blocs/bloc/dish/bloc/dish_bloc.dart';
+import 'package:restaurants/blocs/discovery/discovery_bloc.dart';
+import 'package:restaurants/blocs/dish/dish_bloc.dart';
 import 'package:restaurants/constants/contansts.dart';
 import 'package:restaurants/interfaces/Discovery.dart';
 import 'package:restaurants/screens/Disscover/disscover__nearYou.dart';
