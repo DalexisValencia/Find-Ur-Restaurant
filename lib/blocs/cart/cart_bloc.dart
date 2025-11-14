@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:restaurants/interfaces/Dishes.dart';
@@ -18,13 +16,19 @@ class CartBloc extends Bloc<CartEvent, CartState> {
             selecteds: [],
           ),
         ) {
+    List<Dishes> stateDishesCart = state.props[0] as List<Dishes>;
     on<AddToCart>(
       (event, emit) {
+        List<Dishes> finaldishes = List.from(stateDishesCart)
+          ..add(
+            generateNewDish(event.dish!),
+          );
+
         emit(
           CartFetched(
-            dishes: [],
-            total: 0,
-            amount: 0,
+            dishes: finaldishes,
+            total: _getTodal(finaldishes),
+            amount: _getAmountTotal(finaldishes),
             selecteds: [],
           ),
         );
@@ -32,11 +36,23 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     );
     on<DeleteFromCart>(
       (event, emit) {
+        List<Dishes> finaldishes = List.from(stateDishesCart);
+        if (event.toDelete!.length >= 1) {
+          stateDishesCart.asMap().entries.map((e) {
+            if (event.toDelete!.contains(e.key)) {
+              finaldishes.removeAt(e.key);
+            }
+          }).toList();
+        }
+        // Cuando solo sea uno
+        else if (event.toDelete!.length == 1) {
+          finaldishes.removeAt(0);
+        }
         emit(
           CartFetched(
-            dishes: [],
+            dishes: finaldishes,
             total: 0,
-            amount: 0,
+            amount: _getAmountTotal(finaldishes),
             selecteds: [],
           ),
         );
@@ -44,106 +60,36 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     );
     on<UpdateAmount>(
       (event, emit) {
+        int amountCurrent = event.dish!.amount!;
+        int indexFound = stateDishesCart.indexOf((event.dish!));
+        switch (event.action) {
+          case 'add':
+            amountCurrent += 1;
+            break;
+          case 'remove':
+            amountCurrent = amountCurrent > 0 ? amountCurrent - 1 : 1;
+            break;
+          default:
+        }
+        event.dish!.amount = amountCurrent;
+        Dishes currentPlate = event.dish!.copyWith(
+          generateNewDish(event.dish!),
+        );
+        List<Dishes> copyListDishes = List.from(stateDishesCart)
+          ..removeAt(indexFound);
+        List<Dishes> finaldishes = List.from(copyListDishes)
+          ..insert(indexFound, currentPlate);
+
         emit(
           CartFetched(
-            dishes: [],
-            total: 0,
-            amount: 0,
+            dishes: finaldishes,
+            total: _getTodal(finaldishes),
+            amount: _getAmountTotal(finaldishes),
             selecteds: [],
           ),
         );
       },
     );
-  }
-}
-
-/*
-class CartBloc extends Bloc<CartEvent, CartState> {
-  CartBloc()
-      : super(
-          CartblocInitial(
-            dishes: [],
-            total: 0,
-            amount: 0,
-            selecteds: [],
-          ),
-        );
-
-  @override
-  Stream<CartState> mapEventToState(
-    CartEvent event,
-  ) async* {
-    List<Dishes> stateDishesCart = state.props[0] as List<Dishes>;
-    if (event is AddToCart) {
-      List<Dishes> finaldishes = List.from(stateDishesCart)
-        ..add(
-          generateNewDish(event.dish!),
-        );
-      print(finaldishes);
-      yield FetchItems(
-        finaldishes,
-        _getTodal(finaldishes),
-        _getAmountTotal(finaldishes),
-        // [],
-      );
-    }
-
-    if (event is DeleteFromCart) {
-      List<Dishes> finaldishes = List.from(stateDishesCart);
-      if (event.toDelete!.length >= 1) {
-        stateDishesCart.asMap().entries.map((e) {
-          if (event.toDelete!.contains(e.key)) {
-            finaldishes.removeAt(e.key);
-          }
-        }).toList();
-      }
-      // Cuando solo sea uno
-      else if (event.toDelete!.length == 1) {
-        finaldishes.removeAt(0);
-      }
-      yield FetchItems(
-        finaldishes,
-        0,
-        _getAmountTotal(finaldishes),
-        // [],
-      );
-    }
-
-    if (event is GetAllItems) {
-      // yield FetchItems(dishes: finalDishes);
-    }
-
-    if (event is ClearAll) {
-      // yield FetchItems(dishes: []);
-    }
-
-    if (event is UpdateAmount) {
-      int amountCurrent = event.dish!.amount!;
-      int indexFound = stateDishesCart.indexOf((event.dish!));
-      switch (event.action) {
-        case 'add':
-          amountCurrent += 1;
-          break;
-        case 'remove':
-          amountCurrent = amountCurrent > 0 ? amountCurrent - 1 : 1;
-          break;
-        default:
-      }
-      event.dish!.amount = amountCurrent;
-      Dishes currentPlate = event.dish!.copyWith(
-        generateNewDish(event.dish!),
-      );
-      List<Dishes> copyListDishes = List.from(stateDishesCart)
-        ..removeAt(indexFound);
-      List<Dishes> finaldishes = List.from(copyListDishes)
-        ..insert(indexFound, currentPlate);
-      yield FetchItems(
-        finaldishes,
-        _getTodal(finaldishes),
-        _getAmountTotal(finaldishes),
-        // [],
-      );
-    }
   }
 }
 
@@ -205,4 +151,3 @@ Dishes generateNewDish(Dishes dish) {
   Dishes finalDish = Dishes().copyWith(dish);
   return finalDish;
 }
-*/
