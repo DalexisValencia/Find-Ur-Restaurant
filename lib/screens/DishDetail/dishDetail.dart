@@ -32,6 +32,7 @@ class _PlateDetailScreenState extends State<PlateDetailScreen> {
   late DishBloc instanceDishBloc;
   bool animationChildren = true;
   late ScrollController _controller;
+
   _scrollListener() {
     if (_controller.offset > 100 && !minSizeReached) {
       setState(() {
@@ -70,26 +71,26 @@ class _PlateDetailScreenState extends State<PlateDetailScreen> {
     _controller = ScrollController();
     _controller.addListener(_scrollListener);
     super.initState();
-    instanceDishBloc = BlocProvider.of<DishBloc>(context)
-      ..add(
-        DishStart(
-          currentDish: widget.dish,
-        ),
-      )
-      ..stream.listen((state) {
-        if (state is DishFetched) {
-          startAnimationScreen();
-        }
-      });
+    instanceDishBloc = BlocProvider.of<DishBloc>(context);
+    instanceDishBloc.add(
+      DishStart(
+        currentDish: widget.dish,
+      ),
+    );
+    instanceDishBloc.stream.listen((state) {
+      if (state is DishFetched) {
+        startAnimationScreen();
+      }
+    });
   }
 
   //Cuando avandonamos la vista volvemos al estado de plato vacio
   @override
   void dispose() {
     super.dispose();
-    instanceDishBloc.add(
+    /*instanceDishBloc.add(
       DishClean(),
-    );
+    );*/
   }
 
   Widget _loaderSpinner() {
@@ -186,10 +187,11 @@ class _PlateDetailScreenState extends State<PlateDetailScreen> {
       backgroundColor: Theme.of(context).primaryColorLight,
       body: BlocBuilder<DishBloc, DishState>(
         builder: (BuildContext context, DishState state) {
+          print(state);
           return Container(
             child: Column(
               children: [
-                state is DishEmpty ? _loaderSpinner() : _plateDetailBody(state),
+                state is DishFetched ? _plateDetailBody(state) : _loaderSpinner(),
               ],
             ),
           );

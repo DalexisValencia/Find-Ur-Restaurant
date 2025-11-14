@@ -9,21 +9,29 @@ part 'dishamount_state.dart';
 class DishamountBloc extends Bloc<DishamountEvent, DishamountState> {
   DishamountBloc()
       : super(
-          DishamountInitial(),
+          DishamountInitial(amount: 1,),
         ) {
     on<DishInitialAmount>(
       (event, emit) {
-        emit(DishAmountFetched());
+        emit(DishAmountFetched(
+          amount: event.amount,
+        ),);
       },
     );
     on<DishAmountPlus>(
       (event, emit) {
-        emit(DishAmountFetched());
+        int _state = state.props[0] as int;
+        emit(DishAmountFetched(
+          amount: _state + 1,
+        ));
       },
     );
     on<DishAmountRemove>(
       (event, emit) {
-        emit(DishAmountFetched());
+        int _state = state.props[0] as int;
+        emit(DishAmountFetched(
+          amount: _state - 1,
+        ));
       },
     );
   }

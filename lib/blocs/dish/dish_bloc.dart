@@ -9,10 +9,13 @@ part 'dish_state.dart';
 class DishBloc extends Bloc<DishEvent, DishState> {
   DishBloc()
       : super(
-          DishInitial(),
+          DishInitial(
+            dish: null,
+          ),
         ) {
     on<DishStart>(
       (event, emit) {
+        print("añadimos un printStart");
         emit(
           DishFetched(
             dish: Dishes().copyWith(event.currentDish),

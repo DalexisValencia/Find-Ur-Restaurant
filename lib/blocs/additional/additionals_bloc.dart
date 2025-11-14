@@ -10,26 +10,82 @@ part 'additionals_state.dart';
 class AdditionalsBloc extends Bloc<AdditionalsEvent, AdditionalsState> {
   AdditionalsBloc()
       : super(
-          AdditionalsInitial(),
+          AdditionalsInitial(
+            initial: [],
+            prices: 0,
+          ),
         ) {
     on<AdditionalsPopulate>(
       (event, emit) {
-        emit(AdditionalsFetched());
+        emit(
+          AdditionalsFetched(additionals: event.additionals!, prices: 0),
+        );
       },
     );
     on<AdditionalsStart>(
       (event, emit) {
-        emit(AdditionalsFetched(),);
+        emit(AdditionalsInitial(
+          initial: [],
+          prices: 0,
+        ));
       },
     );
     on<UpdateAditionalState>(
       (event, emit) {
-        emit(AdditionalsFetched(),);
+       // List<String> elementos = state.props[0];
+        //List<String> newsElement = List.from(elementos);
+        //   ..removeAt(event.rid)
+        //   ..insert(event.rid, elementos[event.rid] == "true" ? "false" : "true");
+        // elementos..removeAt(event.rid);
+        // elementos..insert(event.rid, "Cambiado");
+        // print(event.additional);
+        // print(event.rid);
+        // elementos[event.rid] = "Cambiado";
+
+        // print(elementos);
+        // yield AdditionalsCurrent(
+        //     additionals: List.from(elementos)..add(generateRandomString(6)));
+        // emit( AdditionalsFetched(additionals: newsElement, prices: 0), );
       },
     );
-     on<ToggleModifier>(
+    on<ToggleModifier>(
       (event, emit) {
-        emit(AdditionalsFetched(),);
+        //Lista de todos los adicionales
+      List<Adittional> stateAditionals = state.props[0] as List<Adittional>;
+      //Adicional actual encontrado por el indice
+      Adittional currentAddional = stateAditionals[event.parent!];
+      //Lista de los los valores del adicional
+      List<AditionalsOptions> additionalOptions = currentAddional.children!;
+      //Buscamos el elemento dentro de la lista
+      AditionalsOptions currentOption = additionalOptions[event.rid!];
+      // si no es multiple colocamos todos es falso
+      if (currentAddional.isMulti == false) {
+        currentAddional.children?.map((e) {
+          if (e.name != currentOption.name) {
+            e.isActive = false;
+          }
+        }).toList();
+      }
+      currentOption.isActive = !currentOption.isActive!;
+
+      List<Adittional> finalStateAditionals = List.from(stateAditionals);
+      finalStateAditionals[event.parent!].children!
+        ..removeAt(event.rid!)
+        ..insert(event.rid!, currentOption);
+
+      Adittional additionalFinal = Adittional(
+          isMulti: finalStateAditionals[event.parent!].isMulti,
+          title: finalStateAditionals[event.parent!].title,
+          children: finalStateAditionals[event.parent!].children);
+
+      List<Adittional> finalAdditionals = List.from(stateAditionals)
+        ..removeAt(event.parent!)
+        ..insert(event.parent!, additionalFinal);
+      emit(
+          AdditionalsFetched(
+              additionals: finalAdditionals,
+              prices: _getAdditionalPrices(finalAdditionals)),
+        );
       },
     );
   }
@@ -111,6 +167,7 @@ class AdditionalsBloc extends Bloc<AdditionalsEvent, AdditionalsState> {
     super.onChange(change);
   }
 }
+*/
 
 int _getAdditionalPrices(additionals) {
   int price = 0;
@@ -127,4 +184,3 @@ int _getAdditionalPrices(additionals) {
 
   return price;
 }
-*/
