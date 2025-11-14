@@ -62,6 +62,9 @@ class _DishDetailHeaderState extends State<DishDetailHeader> {
                       .contains(widget.dish!.name!)
                   ? () {
                       print("Ya esta en favoritos ahora removerlo");
+                      favoriteBlocInstance.add(
+                        FavoriteRemove(dish: widget.dish),
+                      );
                     }
                   : () {
                       favoriteBlocInstance.add(

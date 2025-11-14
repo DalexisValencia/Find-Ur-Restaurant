@@ -22,4 +22,7 @@ class FavoriteSelected extends FavoritesEvent {
   FavoriteSelected({this.selected});
 }
 
-class FavoriteRemove extends FavoritesEvent {}
+class FavoriteRemove extends FavoritesEvent {
+  final Dishes? dish;
+  FavoriteRemove({this.dish});
+}

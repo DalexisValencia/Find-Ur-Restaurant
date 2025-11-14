@@ -1,5 +1,3 @@
-// import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:restaurants/interfaces/Dishes.dart';
 import 'package:restaurants/interfaces/Restaurants.dart';
@@ -16,23 +14,45 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
             selecteds: [],
           ),
         ) {
+    List<Restaurants> restaurantsState = state.props[0] as List<Restaurants>;
+    List<Dishes> dishesState = state.props[1] as List<Dishes>;
+    List<dynamic> selecteds = state.props[2] as List<dynamic>;
+
     on<FavoriteAddRestaurant>(
       (event, emit) {
+        List<Restaurants> resfinal = List.from(restaurantsState);
+        /*if (restaurantsState.contains(event.restaurant)) {
+          resfinal.remove(event.restaurant);
+        } else if (!restaurantsState.contains(event.restaurant)) {
+          resfinal.add(event.restaurant!);
+        }*/
+        resfinal.add(event.restaurant!);
         emit(
           FavoritesFetched(
-            restaurants: [],
-            dishes: [],
-            selecteds: [],
+            restaurants: resfinal,
+            dishes: dishesState,
+            selecteds: selecteds,
           ),
         );
       },
     );
     on<FavoriteRemove>(
       (event, emit) {
+        List<Restaurants> finalRestaurants = List.from(restaurantsState);
+        List<Dishes> finalDishes = List.from(dishesState);
+        selecteds.map((e) {
+          if (e is Restaurants) {
+            finalRestaurants.remove(e);
+          }
+
+          if (e is Dishes) {
+            finalDishes.remove(e);
+          }
+        }).toList();
         emit(
           FavoritesFetched(
-            restaurants: [],
-            dishes: [],
+            restaurants: finalRestaurants,
+            dishes: finalDishes,
             selecteds: [],
           ),
         );
@@ -40,24 +60,39 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
     );
     on<FavoriteAddDish>(
       (event, emit) {
+        List<Dishes> dishFinal = List.from(dishesState);
+        
+        /*
+        if (dishesState.contains(event.dish)) {
+          dishFinal.remove(event.dish);
+        } else if (!dishesState.contains(event.dish)) {
+          
+        }*/
+        dishFinal.add(event.dish!);
+        print(dishFinal);
         emit(
           FavoritesFetched(
-            restaurants: [],
-            dishes: [],
-            selecteds: [],
+            restaurants: restaurantsState,
+            dishes: dishFinal,
+            selecteds: selecteds,
           ),
         );
       },
     );
     on<FavoriteSelected>(
       (event, emit) {
-        emit(
-          FavoritesFetched(
-            restaurants: [],
-            dishes: [],
-            selecteds: [],
-          ),
-        );
+        List<dynamic> selectedsFinal = List.from(selecteds);
+        if (selectedsFinal.contains(event.selected)) {
+          selectedsFinal.remove(event.selected);
+        } else if (!selectedsFinal.contains(event.selected)) {
+          selectedsFinal.add(event.selected);
+        }
+
+        emit(FavoritesFetched(
+          restaurants: restaurantsState,
+          dishes: dishesState,
+          selecteds: selectedsFinal,
+        ));
       },
     );
   }

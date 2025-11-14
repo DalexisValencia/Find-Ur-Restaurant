@@ -106,7 +106,7 @@ class _ScreenCartState extends State<ScreenCart> {
                   }
                 },
                 goBack: () {
-                  widget.controller!.animateTo(0);
+                  // widget.controller!.animateTo(0);
                 },
               ),
               _bodyCart(
