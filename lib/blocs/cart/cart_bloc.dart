@@ -16,9 +16,9 @@ class CartBloc extends Bloc<CartEvent, CartState> {
             selecteds: [],
           ),
         ) {
-    List<Dishes> stateDishesCart = state.props[0] as List<Dishes>;
     on<AddToCart>(
       (event, emit) {
+        List<Dishes> stateDishesCart = state.props[0] as List<Dishes>;
         List<Dishes> finaldishes = List.from(stateDishesCart)
           ..add(
             generateNewDish(event.dish!),
@@ -36,6 +36,7 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     );
     on<DeleteFromCart>(
       (event, emit) {
+        List<Dishes> stateDishesCart = state.props[0] as List<Dishes>;
         List<Dishes> finaldishes = List.from(stateDishesCart);
         if (event.toDelete!.length >= 1) {
           stateDishesCart.asMap().entries.map((e) {
@@ -61,6 +62,7 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     on<UpdateAmount>(
       (event, emit) {
         int amountCurrent = event.dish!.amount!;
+        List<Dishes> stateDishesCart = state.props[0] as List<Dishes>;
         int indexFound = stateDishesCart.indexOf((event.dish!));
         switch (event.action) {
           case 'add':

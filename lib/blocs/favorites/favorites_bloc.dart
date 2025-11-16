@@ -14,12 +14,12 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
             selecteds: [],
           ),
         ) {
-    List<Restaurants> restaurantsState = state.props[0] as List<Restaurants>;
-    List<Dishes> dishesState = state.props[1] as List<Dishes>;
-    List<dynamic> selecteds = state.props[2] as List<dynamic>;
-
     on<FavoriteAddRestaurant>(
       (event, emit) {
+        List<Restaurants> restaurantsState =
+            state.props[0] as List<Restaurants>;
+        List<Dishes> dishesState = state.props[1] as List<Dishes>;
+        List<dynamic> selecteds = state.props[2] as List<dynamic>;
         List<Restaurants> resfinal = List.from(restaurantsState);
         /*if (restaurantsState.contains(event.restaurant)) {
           resfinal.remove(event.restaurant);
@@ -38,6 +38,10 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
     );
     on<FavoriteRemove>(
       (event, emit) {
+        List<Restaurants> restaurantsState =
+            state.props[0] as List<Restaurants>;
+        List<Dishes> dishesState = state.props[1] as List<Dishes>;
+        List<dynamic> selecteds = state.props[2] as List<dynamic>;
         List<Restaurants> finalRestaurants = List.from(restaurantsState);
         List<Dishes> finalDishes = List.from(dishesState);
         selecteds.map((e) {
@@ -60,8 +64,12 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
     );
     on<FavoriteAddDish>(
       (event, emit) {
+        List<Restaurants> restaurantsState =
+            state.props[0] as List<Restaurants>;
+        List<Dishes> dishesState = state.props[1] as List<Dishes>;
+        List<dynamic> selecteds = state.props[2] as List<dynamic>;
         List<Dishes> dishFinal = List.from(dishesState);
-        
+
         /*
         if (dishesState.contains(event.dish)) {
           dishFinal.remove(event.dish);
@@ -81,6 +89,10 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
     );
     on<FavoriteSelected>(
       (event, emit) {
+        List<Restaurants> restaurantsState =
+            state.props[0] as List<Restaurants>;
+        List<Dishes> dishesState = state.props[1] as List<Dishes>;
+        List<dynamic> selecteds = state.props[2] as List<dynamic>;
         List<dynamic> selectedsFinal = List.from(selecteds);
         if (selectedsFinal.contains(event.selected)) {
           selectedsFinal.remove(event.selected);
