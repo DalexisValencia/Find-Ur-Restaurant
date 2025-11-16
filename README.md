@@ -28,14 +28,14 @@ The app was designed as a **testing and demonstration tool**, focusing on smooth
 - **Architecture:** Modular and maintainable code structure suitable for scalability.  
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/1-home.jpg" width="25%" />
-  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/2-Category.jpg" width="25%" />
-  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/3-detail.jpg" width="25%" />
-  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/4-detail.restaurant.jpg" width="25%" />
-  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/5-Cart.jpg" width="25%" />
-  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/6-Favorite.jpg" width="25%" />
-  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/7-aditionals.jpg" width="25%" />
-  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/8-books.jpg" width="25%" />
+  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/1-home.jpg" width="15%" />
+  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/2-Category.jpg" width="15%" />
+  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/3-detail.jpg" width="15%" />
+  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/4-detail.restaurant.jpg" width="15%" />
+  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/5-Cart.jpg" width="15%" />
+  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/6-Favorite.jpg" width="15%" />
+  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/7-aditionals.jpg" width="15%" />
+  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/8-books.jpg" width="15%" />
 </p>
 
 ## 🧑‍💻 Getting Started  
