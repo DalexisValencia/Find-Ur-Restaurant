@@ -28,9 +28,9 @@ The app was designed as a **testing and demonstration tool**, focusing on smooth
 - **Architecture:** Modular and maintainable code structure suitable for scalability.  
 
 <p align="center">
-  <img src="https://play-lh.googleusercontent.com/f7Pr_KzKNewmMYJilqT8viSMtmFDWMGi4owrZ6AT2Lft86UJMaTjvfKpQcyb8-XGPwI=w2560-h1440" width="25%" />
-  <img src="https://play-lh.googleusercontent.com/kHBqm1hDCYWwkXZmtNTSmVDmHDlcu8BxfJhmHX4WR-aar-XO0-0KFx_IPiSpeI-Tvw=w2560-h1440" width="25%" />
-  <img src="https://play-lh.googleusercontent.com/RSseB2dQQNZFeK-i_LhEUg_7O20QTQH5FXXW86hcMHjTU0LmAeJptov3UxBTGl7iAA=w2560-h1440" width="25%" />
+  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/1-home.jpg" width="25%" />
+  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/2-Category.jpg" width="25%" />
+  <img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/screens-demos/3-detail.jpg" width="25%" />
 </p>
 
 ## 🧑‍💻 Getting Started  
