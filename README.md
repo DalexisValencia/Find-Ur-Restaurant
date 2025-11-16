@@ -1,4 +1,4 @@
-# 💧 Find Ur Restaurant
+<img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/logo-app.png" width="40" height="40" /> Find Ur Restaurant
 > A simple and intuitive Flutter app for search restaurants and meals.
 
 [![Flutter](https://img.shields.io/badge/Built%20with-Flutter-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
