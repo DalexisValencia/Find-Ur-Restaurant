@@ -1,5 +1,12 @@
-<img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/logo-app.png" width="40" height="40" /> Find Ur Restaurant
-> A simple and intuitive Flutter app for search restaurants and meals.
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/DalexisValencia/Find-Ur-Restaurant/refs/heads/master/assets/logo-app.png" width="80" height="80" />
+
+# **Find Ur Restaurant**
+
+> A simple and intuitive Flutter app for searching restaurants and meals.
+
+</div>
 
 [![Flutter](https://img.shields.io/badge/Built%20with-Flutter-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
 [![Platform](https://img.shields.io/badge/Platform-Android-green)](https://play.google.com/store/apps/dev?id=7388974320378962972)
